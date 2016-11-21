@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* load eric meyers reset first */
+
+@import url('reset.css');
+
+/* CSS Document */
+
+
+/* ------------- resets ------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

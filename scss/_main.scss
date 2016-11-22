@@ -12,12 +12,14 @@ body {
 }
 
 header {
-    height: 0;
-    padding-bottom: 100%;
+    height: 100vh;
     background-image: url('../images/trees-fog.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    
+    
+    
     @media only screen and (max-width: 1024px) {
         background-image: url('../images/trees-large.jpg');
     }
@@ -54,12 +56,12 @@ nav {
     }
 }
 
-.title{
+.title {
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-//    border: 5px solid $mist;
+    //    border: 5px solid $mist;
 }
 
 .london-fog {
@@ -67,19 +69,18 @@ nav {
     width: 50%;
 }
 
-.featured{
+.featured {
     display: flex;
-//    align-items: center;
+    //    align-items: center;
     justify-content: center;
-
 }
 
-.content{
+.content {
     max-width: 900px;
 }
 
-.review{
-    padding: 100px;
+.review {
+    padding: 50px;
     width: 100%;
     position: relative;
     top: -2px;
@@ -88,24 +89,34 @@ nav {
     width: 100%;
 }
 
-h2{
+h2 {
     position: relative;
-   font-family: $bold-font; 
-   font-size: 1.5em;
-    color: $midnight; 
-    z-index: 40;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $bold-font;
+    letter-spacing: .2em;
+    font-size: 1.5em;
+    color: $midnight;
 }
 
-h2:after{
+h2 span{
+    position: relative;
+    z-index: 38;
+    display: inline-block;
+    background-color: $mist;
+    padding: 5px 25px;
+}
+
+
+h2:after {
     content: '';
     position: absolute;
-    left: 0;
     top: 50%;
+    left: 0;
     width: 100%;
-    z-index: 39;
+    margin-top: -1px;
     border-top: 2px solid $midnight;
 }
-
 .review:after {
     content: '';
     position: absolute;
@@ -119,14 +130,11 @@ h2:after{
     border-right: solid 25px transparent;
 }
 
-
-
-
-main{
-    margin-top: 50px;
-    height: 500px;
+h3{
+    color: $mist;
+    padding: 5px 75px;
+    border: 2px solid $mist
 }
-
 
 //i. Smartphone – portrait (320px wide)
 //ii. Smartphone – landscape (480px wide)

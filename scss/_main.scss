@@ -5,6 +5,7 @@ $light-font: 'Oswald Extra Light';
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
+
 body {
     background-color: $midnight;
     font-family: $light-font;
@@ -13,15 +14,18 @@ body {
 header {
     height: 0;
     padding-bottom: 100%;
-    background-image: url('../images/trees-large.jpg');
+    background-image: url('../images/trees-fog.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
+    @media only screen and (max-width: 1024px) {
+        background-image: url('../images/trees-large.jpg');
+    }
     @media only screen and (max-width: 768px) {
-        background-image: url('../images/trees-768.jpg');
-} 
-    @media screen and (max-width: 480px){
+        background-image: url('../images/trees-medium.jpg');
+        display: none;
+    }
+    @media screen and (max-width: 480px) {
         background-image: none;
     }
 }
@@ -32,7 +36,7 @@ nav {
         justify-content: flex-end;
     }
     li {
-        margin-top: 50px;
+        padding-top: 50px;
         padding-left: 5%;
     }
     li:last-child {
@@ -50,17 +54,79 @@ nav {
     }
 }
 
-.hero{
-    position: absolute;
-    top: 200px;
-    left: 25%;
-    width: 900px;
-    margin: 0 auto;
+.title{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+//    border: 5px solid $mist;
 }
 
 .london-fog {
+    display: block;
     width: 50%;
 }
+
+.featured{
+    display: flex;
+//    align-items: center;
+    justify-content: center;
+
+}
+
+.content{
+    max-width: 900px;
+}
+
+.review{
+    padding: 100px;
+    width: 100%;
+    position: relative;
+    top: -2px;
+    background-color: $mist;
+    height: 200px;
+    width: 100%;
+}
+
+h2{
+    position: relative;
+   font-family: $bold-font; 
+   font-size: 1.5em;
+    color: $midnight; 
+    z-index: 40;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    z-index: 39;
+    border-top: 2px solid $midnight;
+}
+
+.review:after {
+    content: '';
+    position: absolute;
+    top: -7.555%;
+    left: 50%;
+    margin-left: 5%;
+    width: 0;
+    height: 0;
+    border-bottom: solid 25px $mist;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
+}
+
+
+
+
+main{
+    margin-top: 50px;
+    height: 500px;
+}
+
 
 //i. Smartphone – portrait (320px wide)
 //ii. Smartphone – landscape (480px wide)

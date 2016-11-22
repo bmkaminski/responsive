@@ -58,6 +58,12 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    header {
+      background-image: url("../images/trees-768.jpg"); } }
+  @media screen and (max-width: 480px) {
+    header {
+      background-image: none; } }
 
 nav ul {
   display: flex;
@@ -86,12 +92,6 @@ nav a {
 .london-fog {
   width: 50%; }
 
-@media only screen and (max-width: 1024px) {
-  background-image: url("../images/trees-1024.jpg"); }
-@media only screen and (max-width: 768px) {
-  background-image: url("../images/trees-768.jpg"); }
-@media only screen and (max-width: 480px) {
-  background-image: none; }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

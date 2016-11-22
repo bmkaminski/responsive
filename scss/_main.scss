@@ -17,6 +17,13 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    
+    @media only screen and (max-width: 768px) {
+        background-image: url('../images/trees-768.jpg');
+} 
+    @media screen and (max-width: 480px){
+        background-image: none;
+    }
 }
 
 nav {
@@ -60,15 +67,3 @@ nav {
 //iii. Tablet – portrait (768px wide)
 //iv. Tablet – landscape(1024px wide)
 //v. Desktop – widths wider than 1024px
-
-@media only screen and (max-width: 1024px) {
-    background-image: url('../images/trees-1024.jpg');
-}
-
-@media only screen and (max-width: 768px) {
-    background-image: url('../images/trees-768.jpg');
-}
-
-@media only screen and (max-width: 480px) {
-    background-image: none;
-}

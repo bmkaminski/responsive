@@ -1,0 +1,30 @@
+@import url("reset.css");
+/* ------------- resets ------------- */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* ------------- fonts ------------- */
+@font-face {
+  font-family: 'Oswald Demi Bold';
+  src: url("oswald-demibold-webfont.eot");
+  src: url("oswald-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("oswald-demibold-webfont.woff2") format("woff2"), url("oswald-demibold-webfont.woff") format("woff"), url("oswald-demibold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Oswald Extra Light';
+  src: url("oswald-extralight-webfont.eot");
+  src: url("oswald-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("oswald-extralight-webfont.woff2") format("woff2"), url("oswald-extralight-webfont.woff") format("woff"), url("oswald-extralight-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/* ----------- variables ----------- */
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,72 @@
+/* ----------- variables ----------- */
+
+$bold-font: 'Oswald Demi Bold';
+$light-font: 'Oswald Extra Light';
+$midnight: #131617;
+$antique: #D8C5AF;
+$mist: #EBF1F6;
+body {
+    background-color: $midnight;
+    font-family: $light-font;
+}
+
+header {
+    height: 0;
+    padding-bottom: 100%;
+    background-image: url('../images/trees-large.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    li {
+        margin-top: 50px;
+        padding-left: 5%;
+    }
+    li:last-child {
+        padding-right: 5%;
+    }
+    a {
+        text-decoration: none;
+        letter-spacing: .3em;
+        font-family: $bold-font;
+        font-size: 14px;
+        color: $midnight;
+        &:hover {
+            color: $mist;
+        }
+    }
+}
+
+.hero{
+    width: 900px;
+    margin: 0 auto;
+}
+
+.london-fog {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+}
+
+//i. Smartphone – portrait (320px wide)
+//ii. Smartphone – landscape (480px wide)
+//iii. Tablet – portrait (768px wide)
+//iv. Tablet – landscape(1024px wide)
+//v. Desktop – widths wider than 1024px
+@media only screen and (max-width: 1024px) {
+    background-image: url('../images/trees-1024.jpg');
+}
+
+@media only screen and (max-width: 768px) {
+    background-image: url('../images/trees-768.jpg');
+}
+
+@media only screen and (max-width: 480px) {
+    background-image: none;
+}

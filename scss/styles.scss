@@ -2,7 +2,8 @@
 
 // load resets first 
 
-@import url('reset.css');
+@import "reset";
+@import "main";
 
 // CSS Document
 
@@ -27,11 +28,11 @@ img {
 
 @font-face {
     font-family: 'Oswald Demi Bold';
-    src: url('oswald-demibold-webfont.eot');
-    src: url('oswald-demibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-demibold-webfont.woff2') format('woff2'),
-         url('oswald-demibold-webfont.woff') format('woff'),
-         url('oswald-demibold-webfont.ttf') format('truetype');
+    src: url('../fonts/oswald-demibold-webfont.eot');
+    src: url('../fonts/oswald-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-demibold-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-demibold-webfont.woff') format('woff'),
+         url('../fonts/oswald-demibold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -39,21 +40,12 @@ img {
 
 @font-face {
     font-family: 'Oswald Extra Light';
-    src: url('oswald-extralight-webfont.eot');
-    src: url('oswald-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oswald-extralight-webfont.woff2') format('woff2'),
-         url('oswald-extralight-webfont.woff') format('woff'),
-         url('oswald-extralight-webfont.ttf') format('truetype');
+    src: url('../fonts/oswald-extralight-webfont.eot');
+    src: url('../fonts/oswald-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oswald-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-extralight-webfont.woff') format('woff'),
+         url('../fonts/oswald-extralight-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
-/* ----------- variables ----------- */
-
-$bold-font: 'Oswald Demi Bold';
-$light-font: 'Oswald Extra Light';
-
-$midnight: #131617;
-$antique: #D8C5AF;
-$mist: #EBF1F6;

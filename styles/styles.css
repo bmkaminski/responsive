@@ -1,4 +1,96 @@
-@import url("reset.css");
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ----------- variables ----------- */
+body {
+  background-color: #131617;
+  font-family: "Oswald Extra Light"; }
+
+header {
+  height: 0;
+  padding-bottom: 100%;
+  background-image: url("../images/trees-large.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+
+nav ul {
+  display: flex;
+  justify-content: flex-end; }
+nav li {
+  margin-top: 50px;
+  padding-left: 5%; }
+nav li:last-child {
+  padding-right: 5%; }
+nav a {
+  text-decoration: none;
+  letter-spacing: .3em;
+  font-family: "Oswald Demi Bold";
+  font-size: 14px;
+  color: #131617; }
+  nav a:hover {
+    color: #EBF1F6; }
+
+.hero {
+  width: 900px;
+  margin: 0 auto; }
+
+.london-fog {
+  position: absolute;
+  top: 200px;
+  left: 50%; }
+
+@media only screen and (max-width: 1024px) {
+  background-image: url("../images/trees-1024.jpg"); }
+@media only screen and (max-width: 768px) {
+  background-image: url("../images/trees-768.jpg"); }
+@media only screen and (max-width: 480px) {
+  background-image: none; }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }
@@ -15,16 +107,15 @@ img {
 /* ------------- fonts ------------- */
 @font-face {
   font-family: 'Oswald Demi Bold';
-  src: url("oswald-demibold-webfont.eot");
-  src: url("oswald-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("oswald-demibold-webfont.woff2") format("woff2"), url("oswald-demibold-webfont.woff") format("woff"), url("oswald-demibold-webfont.ttf") format("truetype");
+  src: url("../fonts/oswald-demibold-webfont.eot");
+  src: url("../fonts/oswald-demibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-demibold-webfont.woff2") format("woff2"), url("../fonts/oswald-demibold-webfont.woff") format("woff"), url("../fonts/oswald-demibold-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Oswald Extra Light';
-  src: url("oswald-extralight-webfont.eot");
-  src: url("oswald-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("oswald-extralight-webfont.woff2") format("woff2"), url("oswald-extralight-webfont.woff") format("woff"), url("oswald-extralight-webfont.ttf") format("truetype");
+  src: url("../fonts/oswald-extralight-webfont.eot");
+  src: url("../fonts/oswald-extralight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-extralight-webfont.woff2") format("woff2"), url("../fonts/oswald-extralight-webfont.woff") format("woff"), url("../fonts/oswald-extralight-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-/* ----------- variables ----------- */
 
 /*# sourceMappingURL=styles.css.map */

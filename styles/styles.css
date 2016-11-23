@@ -51,6 +51,38 @@ body {
   background-color: #131617;
   font-family: "Oswald Extra Light"; }
 
+h2 {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald Demi Bold";
+  letter-spacing: .2em;
+  font-size: 1.5em;
+  color: #131617; }
+
+h2 span {
+  display: inline-block;
+  position: relative;
+  padding: 5px 25px;
+  background-color: #EBF1F6;
+  z-index: 38; }
+
+h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -1px;
+  border-top: 2px solid #131617; }
+
+h3 {
+  padding: 5px 75px;
+  border: 2px solid #D8C5AF;
+  text-transform: uppercase;
+  text-align: center;
+  color: #D8C5AF; }
+
 header {
   height: 100vh;
   background-image: url("../images/trees-fog.jpeg");
@@ -111,31 +143,6 @@ nav a {
   height: 200px;
   width: 100%; }
 
-h2 {
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Oswald Demi Bold";
-  letter-spacing: .2em;
-  font-size: 1.5em;
-  color: #131617; }
-
-h2 span {
-  position: relative;
-  z-index: 38;
-  display: inline-block;
-  background-color: #EBF1F6;
-  padding: 5px 25px; }
-
-h2:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  margin-top: -1px;
-  border-top: 2px solid #131617; }
-
 .review:after {
   content: '';
   position: absolute;
@@ -148,10 +155,8 @@ h2:after {
   border-left: solid 25px transparent;
   border-right: solid 25px transparent; }
 
-h3 {
-  color: #EBF1F6;
-  padding: 5px 75px;
-  border: 2px solid #EBF1F6; }
+.mobile-logo {
+  display: none; }
 
 /* ------------- resets ------------- */
 html {

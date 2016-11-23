@@ -5,13 +5,18 @@ $light-font: 'Oswald Extra Light';
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
-
+// -----> main styles 
 body {
     background-color: $midnight;
     font-family: $light-font;
 }
 
-// -----> heading styles 
+main {
+    margin-top: 50px;
+}
+
+
+/* -------- heading styles -------- */
 
 // h2 set between bars 
 h2 {
@@ -24,7 +29,7 @@ h2 {
     color: $midnight;
 }
 
-h2 span{
+h2 span {
     display: inline-block;
     position: relative;
     padding: 5px 25px;
@@ -43,15 +48,26 @@ h2:after {
 }
 
 // h3 with border box around 
-h3{
-    padding: 5px 75px;
-    border: 2px solid $antique;
-    text-transform: uppercase;
+h3 {
+    padding: 10px 100px;
+    border: 2px solid $mist;
     text-align: center;
-    color: $antique;
+    text-transform: uppercase;
+    font-family: $bold-font;
+    letter-spacing: .2em;
+    font-size: 1.5em;
+    color: $mist;
 }
 
-// main header with background/hero image 
+h4 {
+    text-transform: uppercase;
+    font-family: $bold-font;
+    letter-spacing: .2em;
+    color: $midnight;
+}
+
+
+/* --------- hero image --------- */
 
 header {
     height: 100vh;
@@ -59,7 +75,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
     @media only screen and (max-width: 1024px) {
         background-image: url('../images/trees-large.jpg');
     }
@@ -72,8 +87,10 @@ header {
     }
 }
 
-// desktop/tablet landscape navigation 
 
+/* --------- navigation --------- */
+
+// desktop/tablet landscape
 nav {
     ul {
         display: flex;
@@ -98,8 +115,7 @@ nav {
     }
 }
 
-// svg logo "the london fog blog"
-
+// -----> svg logo "the london fog blog" <-----
 .title {
     display: flex;
     min-height: 100vh;
@@ -113,18 +129,55 @@ nav {
     width: 50%;
 }
 
-// featured post with review 
+// -----> featured post with review <-----
 .featured {
     display: flex;
     //    align-items: center;
     justify-content: center;
 }
 
-.content {
+.main-content {
     max-width: 900px;
 }
 
-// create review with triangle pointer
+/* -------- popular reviews -------- */
+
+.post-sections {
+    width: 1200px;
+    margin: 65px auto;
+}
+
+.left {
+    width: 66.666666666666667%;
+}
+
+.right{
+    width: 33.333333333333333%;
+}
+
+.col-01,
+.col-02 {
+    margin-top: 60px;
+    width: 50%;
+}
+
+.col-01 {
+    margin-bottom: 50px;
+    article {
+        margin-bottom: 25px;
+    }
+}
+
+.main-logo{
+    display: block;
+    
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+    
+}
+
+// -----> create review with triangle pointer
 .review {
     padding: 50px;
     width: 100%;
@@ -140,7 +193,7 @@ nav {
     position: absolute;
     top: -7.555%;
     left: 50%;
-    margin-left: 5%;
+    margin-left: 10%;
     width: 0;
     height: 0;
     border-bottom: solid 25px $mist;
@@ -148,11 +201,10 @@ nav {
     border-right: solid 25px transparent;
 }
 
-// hide mobile logo
-.mobile-logo{
+// -----> hide mobile logo
+.mobile-logo {
     display: none;
 }
-
 
 //i. Smartphone – portrait (320px wide)
 //ii. Smartphone – landscape (480px wide)

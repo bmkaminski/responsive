@@ -51,6 +51,10 @@ body {
   background-color: #131617;
   font-family: "Oswald Extra Light"; }
 
+main {
+  margin-top: 50px; }
+
+/* -------- heading styles -------- */
 h2 {
   position: relative;
   text-align: center;
@@ -77,12 +81,22 @@ h2:after {
   border-top: 2px solid #131617; }
 
 h3 {
-  padding: 5px 75px;
-  border: 2px solid #D8C5AF;
-  text-transform: uppercase;
+  padding: 10px 100px;
+  border: 2px solid #EBF1F6;
   text-align: center;
-  color: #D8C5AF; }
+  text-transform: uppercase;
+  font-family: "Oswald Demi Bold";
+  letter-spacing: .2em;
+  font-size: 1.5em;
+  color: #EBF1F6; }
 
+h4 {
+  text-transform: uppercase;
+  font-family: "Oswald Demi Bold";
+  letter-spacing: .2em;
+  color: #131617; }
+
+/* --------- hero image --------- */
 header {
   height: 100vh;
   background-image: url("../images/trees-fog.jpeg");
@@ -100,6 +114,7 @@ header {
     header {
       background-image: none; } }
 
+/* --------- navigation --------- */
 nav ul {
   display: flex;
   justify-content: flex-end; }
@@ -131,8 +146,35 @@ nav a {
   display: flex;
   justify-content: center; }
 
-.content {
+.main-content {
   max-width: 900px; }
+
+/* -------- popular reviews -------- */
+.post-sections {
+  width: 1200px;
+  margin: 65px auto; }
+
+.left {
+  width: 66.666666666666667%; }
+
+.right {
+  width: 33.333333333333333%; }
+
+.col-01,
+.col-02 {
+  margin-top: 60px;
+  width: 50%; }
+
+.col-01 {
+  margin-bottom: 50px; }
+  .col-01 article {
+    margin-bottom: 25px; }
+
+.main-logo {
+  display: block; }
+  @media screen and (max-width: 480px) {
+    .main-logo {
+      display: none; } }
 
 .review {
   padding: 50px;
@@ -148,7 +190,7 @@ nav a {
   position: absolute;
   top: -7.555%;
   left: 50%;
-  margin-left: 5%;
+  margin-left: 10%;
   width: 0;
   height: 0;
   border-bottom: solid 25px #EBF1F6;

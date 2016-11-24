@@ -81,7 +81,7 @@ h2:after {
   border-top: 2px solid #131617; }
 
 h3 {
-  padding: 10px 100px;
+  padding: 10px 20%;
   border: 2px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
@@ -151,33 +151,55 @@ nav a {
 
 /* -------- popular reviews -------- */
 .post-sections {
-  width: 1200px;
+  display: flex;
+  width: 85%;
   margin: 65px auto; }
 
+.popular {
+  flex-basis: 100%; }
+
 .left {
+  display: flex;
+  flex-wrap: wrap;
   width: 66.666666666666667%; }
+  @media screen and (max-width: 768px) {
+    .left {
+      width: 100%; } }
 
 .right {
   width: 33.333333333333333%; }
+  @media screen and (max-width: 768px) {
+    .right {
+      width: 0%; } }
 
 .col-01,
 .col-02 {
+  margin: 0 auto;
   margin-top: 60px;
-  width: 50%; }
+  width: 47%; }
 
 .col-01 {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-right: 2.5%; }
   .col-01 article {
     margin-bottom: 25px; }
 
+.col-02 article {
+  margin-bottom: 25px; }
+
 .main-logo {
-  display: block; }
-  @media screen and (max-width: 480px) {
+  display: block;
+  margin: 0 10%; }
+  @media screen and (max-width: 1024px) {
+    .main-logo {
+      margin-left: 25%;
+      margin-right: 0%; } }
+  @media screen and (max-width: 768px) {
     .main-logo {
       display: none; } }
 
 .review {
-  padding: 50px;
+  padding: 5%;
   width: 100%;
   position: relative;
   top: -2px;
@@ -199,6 +221,9 @@ nav a {
 
 .mobile-logo {
   display: none; }
+  @media screen and (max-width: 768px) {
+    .mobile-logo {
+      display: block; } }
 
 /* ------------- resets ------------- */
 html {

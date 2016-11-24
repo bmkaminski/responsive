@@ -809,6 +809,9 @@ h3 {
   font-size: 1.3em;
   color: #EBF1F6; }
 
+.mobile-h3 {
+  display: none; }
+
 h4 {
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
@@ -834,23 +837,39 @@ header {
   position: relative; }
 
 /* --------- navigation --------- */
-nav ul {
+.nav-main ul {
   display: flex;
   justify-content: flex-end; }
-nav li {
+
+.nav-main li {
   padding-top: 50px;
   padding-left: 5%; }
-nav li:last-child {
+
+.nav-main li:last-child {
   padding-right: 5%; }
-nav a {
-  display: block;
+
+.nav-main a {
   text-decoration: none;
   letter-spacing: .3em;
   font-family: "Oswald Demi Bold";
   font-size: 14px;
   color: #131617; }
-  nav a:hover {
+  .nav-main a:hover {
     color: #EBF1F6; }
+
+.btn-mobile {
+  display: none;
+  height: 40px;
+  margin: 20px auto;
+  background-color: transparent;
+  border: none;
+  font-family: "Oswald Demi Bold";
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #EBF1F6; }
+  .btn-mobile:hover {
+    color: #D8C5AF; }
 
 .title {
   display: flex;
@@ -898,6 +917,7 @@ nav a {
 
 .right {
   display: flex;
+  flex-wrap: wrap;
   width: 28.333333333333333%;
   color: #EBF1F6; }
 
@@ -960,26 +980,80 @@ nav a {
 /* -------- media queries -------- */
 @media only screen and (max-width: 768px) {
   header {
-    background-image: url("../images/trees-fog-tablet.jpg"); }
+    background-image: url("../images/trees-fog-tablet.jpg");
+    height: 100%; }
 
-  .title, .main-logo {
+  .title,
+  .main-logo {
     display: none; }
 
   .mobile-logo {
     display: block;
-    margin: 40px auto;
-    width: 50%; }
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 35%; }
+
+  .nav-main ul {
+    justify-content: center; }
+
+  .nav-main a {
+    padding: 0 25%;
+    color: #EBF1F6; }
+    .nav-main a:hover {
+      color: #D8C5AF; }
 
   .post-sections,
   .left,
   .right {
     width: 100%; }
 
-  h3, h4 {
+  h3,
+  h4 {
     font-size: 1.2em; } }
 @media only screen and (max-width: 480px) {
   header {
-    background-image: none; } }
+    background-image: none; }
+
+  .mobile-logo {
+    width: 45%; }
+
+  .btn-mobile {
+    display: block; }
+
+  .nav-main {
+    height: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    transition: height 0.3s ease; }
+
+  .nav-main ul {
+    flex-direction: column;
+    text-align: center; }
+
+  .nav-main li {
+    border-top: 1px solid #D8C5AF;
+    padding: 15px 0; }
+    .nav-main li:last-child {
+      border-bottom: 1px solid #D8C5AF; }
+
+  .show .nav-main {
+    height: 155px; }
+
+  .nav-main a {
+    display: block;
+    width: 100%;
+    text-transform: uppercase; }
+    .nav-main a:hover {
+      background-color: #D8C5AF;
+      color: #131617; }
+
+  h2 {
+    display: none; }
+
+  .mobile-h3 {
+    font-size: .9em;
+    display: block;
+    margin: 0px 10% 40px; } }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

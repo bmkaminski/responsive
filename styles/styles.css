@@ -49,7 +49,9 @@ table {
 /* ----------- variables ----------- */
 body {
   background-color: #131617;
-  font-family: "Oswald Extra Light"; }
+  font-family: "Oswald Extra Light";
+  letter-spacing: .2em;
+  line-height: 14.4pt; }
 
 main {
   margin-top: 50px; }
@@ -82,7 +84,7 @@ h2:after {
 
 h3 {
   padding: 10px 20%;
-  border: 2px solid #EBF1F6;
+  border: 1px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
@@ -95,6 +97,17 @@ h4 {
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
   color: #131617; }
+
+h5 {
+  margin: 40px 0 25px;
+  padding: 10px 20%;
+  border: 1px solid #EBF1F6;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald Demi Bold";
+  letter-spacing: .2em;
+  font-size: 1.2em;
+  color: #EBF1F6; }
 
 /* --------- hero image --------- */
 header {
@@ -187,9 +200,14 @@ nav a {
 .col-02 article {
   margin-bottom: 25px; }
 
+.col-03 {
+  margin: 0 15%; }
+  .col-03 p {
+    font-size: .8em;
+    color: #EBF1F6; }
+
 .main-logo {
-  display: block;
-  margin: 0 10%; }
+  display: block; }
   @media screen and (max-width: 1024px) {
     .main-logo {
       margin-left: 25%;
@@ -206,6 +224,8 @@ nav a {
   background-color: #EBF1F6;
   height: 200px;
   width: 100%; }
+  .review p {
+    margin-top: 20px; }
 
 .review:after {
   content: '';

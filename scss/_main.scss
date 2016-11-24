@@ -9,6 +9,8 @@ $mist: #EBF1F6;
 body {
     background-color: $midnight;
     font-family: $light-font;
+    letter-spacing: .2em;
+    line-height: 14.4pt;
 }
 
 main {
@@ -50,7 +52,7 @@ h2:after {
 // h3 with border box around 
 h3 {
     padding: 10px 20%;
-    border: 2px solid $mist;
+    border: 1px solid $mist;
     text-align: center;
     text-transform: uppercase;
     font-family: $bold-font;
@@ -66,6 +68,17 @@ h4 {
     color: $midnight;
 }
 
+h5{
+    margin: 40px 0 25px;
+    padding: 10px 20%;
+    border: 1px solid $mist;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $bold-font;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+    color: $mist; 
+}
 
 /* --------- hero image --------- */
 
@@ -196,9 +209,17 @@ nav {
     }
 }
 
+.col-03{
+    margin: 0 15%;
+    
+    p{
+       font-size: .8em;    
+       color: $mist; 
+    }
+}
+
 .main-logo{
     display: block;
-    margin: 0 10%;
     
     @media screen and (max-width: 1024px) {
         margin-left: 25%;
@@ -220,6 +241,10 @@ nav {
     background-color: $mist;
     height: 200px;
     width: 100%;
+    
+    p{
+        margin-top: 20px;
+    }
 }
 
 .review:after {

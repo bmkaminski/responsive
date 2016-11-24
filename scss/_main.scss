@@ -366,9 +366,11 @@ header {
         text-align: center;
     }
     .nav-main li {
+        padding-top: 0;
+        padding-left: 0;
         border-top: 1px solid $antique;
-        padding: 15px 0;
         &:last-child {
+            padding-right: 0;
             border-bottom: 1px solid $antique;
         }
     }
@@ -376,6 +378,7 @@ header {
         height: 155px;
     }
     .nav-main a {
+        line-height: 40px;
         display: block;
         width: 100%;
         text-transform: uppercase;

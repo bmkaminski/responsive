@@ -1047,15 +1047,18 @@ header {
     text-align: center; }
 
   .nav-main li {
-    border-top: 1px solid #D8C5AF;
-    padding: 15px 0; }
+    padding-top: 0;
+    padding-left: 0;
+    border-top: 1px solid #D8C5AF; }
     .nav-main li:last-child {
+      padding-right: 0;
       border-bottom: 1px solid #D8C5AF; }
 
   .show .nav-main {
     height: 155px; }
 
   .nav-main a {
+    line-height: 40px;
     display: block;
     width: 100%;
     text-transform: uppercase; }

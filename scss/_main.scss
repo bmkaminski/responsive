@@ -27,7 +27,7 @@ h2 {
     text-transform: uppercase;
     font-family: $bold-font;
     letter-spacing: .2em;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: $midnight;
 }
 
@@ -57,7 +57,7 @@ h3 {
     text-transform: uppercase;
     font-family: $bold-font;
     letter-spacing: .2em;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: $mist;
 }
 
@@ -68,7 +68,7 @@ h4 {
     color: $midnight;
 }
 
-h5{
+h5 {
     margin: 40px 0 25px;
     padding: 10px 20%;
     border: 1px solid $mist;
@@ -79,31 +79,22 @@ h5{
     font-size: 1.2em;
 }
 
+
 /* --------- hero image --------- */
 
 header {
     height: 100vh;
-    background-image: url('../images/final-trees-fog.jpg');
+    background-image: url('../images/trees-fog-desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    
-//    @media only screen and (max-width: 1024px) {
-//        background-image: url('../images/trees-large.jpg');
-//    }
-//    
-//    @media only screen and (max-width: 768px) {
-//        background-image: url('../images/trees-medium.jpg');
-//        display: none;
-//    }
-//    @media screen and (max-width: 480px) {
-//        background-image: none;
-//    }
 }
+
 
 /* --------- navigation --------- */
 
 // desktop/tablet landscape
+// before display flex on ul, no relative position
 nav {
     ul {
         display: flex;
@@ -117,6 +108,7 @@ nav {
         padding-right: 5%;
     }
     a {
+        display: block;
         text-decoration: none;
         letter-spacing: .3em;
         font-family: $bold-font;
@@ -137,21 +129,20 @@ nav {
     //    border: 5px solid $mist;
 }
 
-.london-fog {
-    display: block;
+.london-fog{
     width: 50%;
 }
 
 .path-01 {
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
-  animation: dash 4s linear forwards;
+  animation: dash 3s linear forwards;
 }
 
 .path-02{
     stroke-dasharray: 700;
   stroke-dashoffset: 700;
-    animation: dash 4s linear 2s forwards;
+    animation: dash 3s linear 1.5s forwards;
 }
 
 @keyframes dash {
@@ -159,7 +150,6 @@ nav {
     stroke-dashoffset: 0;
   }
 }
-
 // -----> featured post with review <-----
 .featured {
     display: flex;
@@ -171,16 +161,16 @@ nav {
     max-width: 900px; //65%
 }
 
+
 /* -------- popular reviews -------- */
 
 .post-sections {
     display: flex;
-    width: 85%;
+    width: 80%;
     margin: 65px auto;
 }
 
-
-.popular{
+.popular {
     flex-basis: 100%;
 }
 
@@ -188,21 +178,13 @@ nav {
     display: flex;
     flex-wrap: wrap;
     width: 66.666666666666667%;
-    
-     @media screen and (max-width: 768px) {
-        width: 100%;
-    }
-    
+    margin-right: 5%;
 }
 
-.right{
-    width: 33.333333333333333%;
-    color: $mist; 
-    
-      @media screen and (max-width: 768px) {
-        width: 0%;
-    }
-    
+.right {
+    display: flex;
+    width: 28.333333333333333%;
+    color: $mist;
 }
 
 .col-01,
@@ -220,33 +202,30 @@ nav {
     }
 }
 
-.col-02{
+.col-02 {
     article {
         margin-bottom: 25px;
     }
 }
 
-.col-03{
-    margin: 0 15%;
-    
-    p{
-       font-size: .8em;    
-       color: $mist; 
+.col-03 {
+    margin: 0 10%;;
+    p {
+        font-size: .8em;
+        color: $mist;
     }
 }
 
-.main-logo{
+.main-logo {
     display: block;
-    
-    @media screen and (max-width: 1024px) {
-        margin-left: 25%;
-        margin-right: 0%;
+}
+
+.left a{
+    text-decoration: none;
+    color: $mist;
+    &:hover{
+        text-decoration: underline;
     }
-    
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-    
 }
 
 // -----> create review with triangle pointer
@@ -258,8 +237,7 @@ nav {
     background-color: $mist;
     height: 200px;
     width: 100%;
-    
-    p{
+    p {
         margin-top: 20px;
     }
 }
@@ -280,11 +258,43 @@ nav {
 // -----> hide mobile logo
 .mobile-logo {
     display: none;
-    
-     @media screen and (max-width: 768px) {
-        display: block;
+}
+
+
+/* -------- media queries -------- */
+
+// tablet size
+@media only screen and (max-width: 768px) {
+    header {
+        background-image: url('../images/trees-fog-tablet.jpg');
     }
     
+    .title, .main-logo {
+        display: none;
+    }
+    .mobile-logo {
+        display: block;
+        margin: 40px auto;
+        width: 50%;
+    }
+    .post-sections,
+    .left, 
+    .right {
+        width: 100%;
+    }
+    
+    h3, h4{
+        font-size: 1.2em;
+    }
+
+}
+
+// phone size
+@media only screen and (max-width: 480px) {
+    header {
+        background-image: none;
+    }
+   
 }
 
 //i. Smartphone – portrait (320px wide)

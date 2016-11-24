@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.72 478.71">
+  <title>lf-title-all</title>
+  <g id="text">
+    <text transform="translate(383.18 359.35)" style="font-size: 24px;fill: #ecf2f6;font-family: Oswald-DemiBold, Oswald;font-weight: 700;letter-spacing: 0.19071451822916666em">L<tspan x="14.95" y="0" style="letter-spacing: 0.20001220703125em">ONDON FOG</tspan></text>
+    <text transform="translate(337.07 314.14)" style="font-size: 18px;fill: #ecf2f6;font-family: Oswald-ExtraLight, Oswald;letter-spacing: 0.2000054253472222em">the</text>
+    <text transform="translate(332.02 404.44)" style="font-size: 18px;fill: #ecf2f6;font-family: Oswald-ExtraLight, Oswald;letter-spacing: 0.2000054253472222em">blog</text>
+  </g>
+  <g id="lines">
+    <line x1="0.35" y1="0.35" x2="478.36" y2="478.36" style="fill: none;stroke: #ebf1f6;stroke-miterlimit: 10"/>
+    <line x1="565.37" y1="134.75" x2="304.3" y2="395.81" style="fill: none;stroke: #ebf1f6;stroke-miterlimit: 10"/>
+  </g>
+</svg>

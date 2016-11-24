@@ -853,7 +853,8 @@ header {
   letter-spacing: .3em;
   font-family: "Oswald Demi Bold";
   font-size: 14px;
-  color: #131617; }
+  color: #131617;
+  transition: 0.3s ease; }
   .nav-main a:hover {
     color: #EBF1F6; }
 
@@ -898,13 +899,15 @@ header {
   justify-content: center; }
 
 .main-content {
-  max-width: 900px; }
+  max-width: 65%; }
 
 /* -------- popular reviews -------- */
 .post-sections {
   display: flex;
   width: 80%;
-  margin: 65px auto; }
+  margin: 65px auto;
+  font-size: .8em;
+  color: #EBF1F6; }
 
 .popular {
   flex-basis: 100%; }
@@ -938,18 +941,18 @@ header {
 
 .col-03 {
   margin: 0 10%; }
-  .col-03 p {
-    font-size: .8em;
-    color: #EBF1F6; }
 
 .main-logo {
   display: block; }
 
-.left a {
+.post-sections a {
   text-decoration: none;
   color: #EBF1F6; }
-  .left a:hover {
+  .post-sections a:hover {
     text-decoration: underline; }
+
+.post-sections li {
+  margin-bottom: 5px; }
 
 .review {
   padding: 5%;
@@ -978,10 +981,14 @@ header {
   display: none; }
 
 /* -------- media queries -------- */
+@media only screen and (max-width: 1024px) {
+  .main-content {
+    min-width: 100%; } }
 @media only screen and (max-width: 768px) {
   header {
     background-image: url("../images/trees-fog-tablet.jpg");
-    height: 100%; }
+    height: 450px;
+    padding-bottom: 100%; }
 
   .title,
   .main-logo {
@@ -1002,10 +1009,19 @@ header {
     .nav-main a:hover {
       color: #D8C5AF; }
 
-  .post-sections,
+  .post-sections {
+    flex-direction: column;
+    width: 100%; }
+
   .left,
   .right {
     width: 100%; }
+
+  .left a {
+    margin-left: 5%; }
+
+  .popular {
+    margin: 0 10%; }
 
   h3,
   h4 {
@@ -1024,7 +1040,7 @@ header {
     height: 0;
     padding-bottom: 0;
     overflow: hidden;
-    transition: height 0.3s ease; }
+    transition: height 0.5s ease; }
 
   .nav-main ul {
     flex-direction: column;
@@ -1047,13 +1063,27 @@ header {
       background-color: #D8C5AF;
       color: #131617; }
 
+  .col-01,
+  .col-02 {
+    width: 100%; }
+
+  .col-01 {
+    margin-right: 0; }
+
   h2 {
     display: none; }
 
   .mobile-h3 {
     font-size: .9em;
     display: block;
-    margin: 0px 10% 40px; } }
+    margin: 0px 10% 40px; }
+
+  .popular {
+    font-size: 1em; }
+
+  .left {
+    width: 100%;
+    margin-right: 0; } }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

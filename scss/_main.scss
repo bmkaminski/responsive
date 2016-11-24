@@ -5,11 +5,6 @@ $light-font: 'Oswald Extra Light';
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
-
-
-
-
-
 // -----> main styles 
 body {
     background-color: $midnight;
@@ -66,7 +61,7 @@ h3 {
     color: $mist;
 }
 
-.mobile-h3{
+.mobile-h3 {
     display: none;
 }
 
@@ -119,18 +114,19 @@ header {
 }
 
 .nav-main a {
-//    display: block;
+    //    display: block;
     text-decoration: none;
     letter-spacing: .3em;
     font-family: $bold-font;
     font-size: 14px;
     color: $midnight;
+    transition: 0.3s ease;
     &:hover {
         color: $mist;
     }
 }
 
-.btn-mobile{
+.btn-mobile {
     display: none;
     height: 40px;
     margin: 20px auto;
@@ -141,7 +137,7 @@ header {
     text-transform: uppercase;
     font-size: 1em;
     color: $mist;
-    &:hover{
+    &:hover {
         color: $antique;
     }
 }
@@ -180,12 +176,11 @@ header {
 // -----> featured post with review <-----
 .featured {
     display: flex;
-    //    align-items: center;
     justify-content: center;
 }
 
 .main-content {
-    max-width: 900px; //65%
+    max-width: 65%;
 }
 
 
@@ -195,6 +190,8 @@ header {
     display: flex;
     width: 80%;
     margin: 65px auto;
+    font-size: .8em;
+    color: $mist;
 }
 
 .popular {
@@ -238,22 +235,23 @@ header {
 
 .col-03 {
     margin: 0 10%;
-    ;
-    p {
-        font-size: .8em;
-        color: $mist;
-    }
 }
 
 .main-logo {
     display: block;
 }
 
-.left a {
+.post-sections a {
     text-decoration: none;
     color: $mist;
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.post-sections {
+    li {
+        margin-bottom: 5px;
     }
 }
 
@@ -292,11 +290,18 @@ header {
 
 /* -------- media queries -------- */
 
+@media only screen and (max-width: 1024px) {
+    .main-content {
+        min-width: 100%;
+    }
+}
+
 // tablet size
 @media only screen and (max-width: 768px) {
     header {
         background-image: url('../images/trees-fog-tablet.jpg');
-        height: 100%;
+        height: 450px;
+        padding-bottom: 100%;
     }
     .title,
     .main-logo {
@@ -308,29 +313,34 @@ header {
         margin: 0 auto;
         width: 35%;
     }
-    
-    .nav-main ul{
+    .nav-main ul {
         justify-content: center;
     }
-    
-    .nav-main a{
+    .nav-main a {
         padding: 0 25%;
         color: $mist;
-        &:hover{
+        &:hover {
             color: $antique;
         }
     }
-    
-    .post-sections,
+    .post-sections {
+        flex-direction: column;
+        width: 100%;
+    }
     .left,
     .right {
         width: 100%;
+    }
+    .left a {
+        margin-left: 5%;
+    }
+    .popular {
+        margin: 0 10%;
     }
     h3,
     h4 {
         font-size: 1.2em;
     }
-
 }
 
 // phone size
@@ -341,56 +351,61 @@ header {
     .mobile-logo {
         width: 45%;
     }
-    
-    .btn-mobile{
+    .btn-mobile {
         display: block;
     }
-    
-    .nav-main{
-		height: 0;
+    .nav-main {
+        height: 0;
         padding-bottom: 0;
-//		clear: both;
-		overflow: hidden;
-		transition: height 0.3s ease; 
-        
-	}
-    
-    .nav-main ul{
+        //		clear: both;
+        overflow: hidden;
+        transition: height 0.5s ease;
+    }
+    .nav-main ul {
         flex-direction: column;
         text-align: center;
     }
-    
-    .nav-main li{
+    .nav-main li {
         border-top: 1px solid $antique;
         padding: 15px 0;
-        &:last-child{
+        &:last-child {
             border-bottom: 1px solid $antique;
         }
     }
-    
-    .show .nav-main{
+    .show .nav-main {
         height: 155px;
     }
-    
-    .nav-main a{
+    .nav-main a {
         display: block;
         width: 100%;
         text-transform: uppercase;
-        &:hover{
+        &:hover {
             background-color: $antique;
             color: $midnight;
         }
     }
-    
-    h2{
+    .col-01,
+    .col-02 {
+        width: 100%;
+    }
+    .col-01 {
+        margin-right: 0;
+    }
+    h2 {
         display: none;
     }
-    
-    .mobile-h3{
+    .mobile-h3 {
         font-size: .9em;
         display: block;
         margin: 0px 10% 40px;
     }
+    .popular {
+        font-size: 1em;
+    }
+        .left {
+            width: 100%;
+            margin-right: 0;
+        }
 }
 
 //i. Smartphone – portrait (320px wide)

@@ -77,31 +77,29 @@ h5{
     font-family: $bold-font;
     letter-spacing: .2em;
     font-size: 1.2em;
-    color: $mist; 
 }
 
 /* --------- hero image --------- */
 
 header {
     height: 100vh;
-    background-image: url('../images/trees-fog.jpeg');
+    background-image: url('../images/final-trees-fog.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     
-    @media only screen and (max-width: 1024px) {
-        background-image: url('../images/trees-large.jpg');
-    }
-    
-    @media only screen and (max-width: 768px) {
-        background-image: url('../images/trees-medium.jpg');
-        display: none;
-    }
-    @media screen and (max-width: 480px) {
-        background-image: none;
-    }
+//    @media only screen and (max-width: 1024px) {
+//        background-image: url('../images/trees-large.jpg');
+//    }
+//    
+//    @media only screen and (max-width: 768px) {
+//        background-image: url('../images/trees-medium.jpg');
+//        display: none;
+//    }
+//    @media screen and (max-width: 480px) {
+//        background-image: none;
+//    }
 }
-
 
 /* --------- navigation --------- */
 
@@ -144,6 +142,24 @@ nav {
     width: 50%;
 }
 
+.path-01 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: dash 4s linear forwards;
+}
+
+.path-02{
+    stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+    animation: dash 4s linear 2s forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 // -----> featured post with review <-----
 .featured {
     display: flex;
@@ -181,6 +197,7 @@ nav {
 
 .right{
     width: 33.333333333333333%;
+    color: $mist; 
     
       @media screen and (max-width: 768px) {
         width: 0%;
@@ -237,7 +254,7 @@ nav {
     padding: 5%;
     width: 100%;
     position: relative;
-    top: -2px;
+    top: -5px;
     background-color: $mist;
     height: 200px;
     width: 100%;

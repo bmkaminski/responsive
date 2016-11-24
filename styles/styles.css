@@ -106,26 +106,15 @@ h5 {
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
-  font-size: 1.2em;
-  color: #EBF1F6; }
+  font-size: 1.2em; }
 
 /* --------- hero image --------- */
 header {
   height: 100vh;
-  background-image: url("../images/trees-fog.jpeg");
+  background-image: url("../images/final-trees-fog.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
-  @media only screen and (max-width: 1024px) {
-    header {
-      background-image: url("../images/trees-large.jpg"); } }
-  @media only screen and (max-width: 768px) {
-    header {
-      background-image: url("../images/trees-medium.jpg");
-      display: none; } }
-  @media screen and (max-width: 480px) {
-    header {
-      background-image: none; } }
 
 /* --------- navigation --------- */
 nav ul {
@@ -155,6 +144,19 @@ nav a {
   display: block;
   width: 50%; }
 
+.path-01 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: dash 4s linear forwards; }
+
+.path-02 {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: dash 4s linear 2s forwards; }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0; } }
 .featured {
   display: flex;
   justify-content: center; }
@@ -180,7 +182,8 @@ nav a {
       width: 100%; } }
 
 .right {
-  width: 33.333333333333333%; }
+  width: 33.333333333333333%;
+  color: #EBF1F6; }
   @media screen and (max-width: 768px) {
     .right {
       width: 0%; } }
@@ -220,7 +223,7 @@ nav a {
   padding: 5%;
   width: 100%;
   position: relative;
-  top: -2px;
+  top: -5px;
   background-color: #EBF1F6;
   height: 200px;
   width: 100%; }

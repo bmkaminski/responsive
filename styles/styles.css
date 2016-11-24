@@ -764,6 +764,7 @@ table {
 
 /*# sourceMappingURL=aos.css.map*/
 /* ----------- variables ----------- */
+/* ---------- main styles ---------- */
 body {
   background-color: #131617;
   font-family: "Oswald Extra Light";
@@ -910,6 +911,7 @@ header {
 @keyframes fade {
   100% {
     opacity: 1; } }
+/* -------- featured review -------- */
 .featured {
   display: flex;
   justify-content: center; }
@@ -922,8 +924,7 @@ header {
   display: flex;
   width: 80%;
   margin: 65px auto;
-  font-size: .8em;
-  color: #EBF1F6; }
+  font-size: .8em; }
 
 .popular {
   flex-basis: 100%; }
@@ -984,14 +985,13 @@ header {
 .review:after {
   content: '';
   position: absolute;
-  top: -7.555%;
+  top: -19.5px;
   left: 50%;
-  margin-left: 10%;
   width: 0;
   height: 0;
-  border-bottom: solid 25px #EBF1F6;
-  border-left: solid 25px transparent;
-  border-right: solid 25px transparent; }
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
+  border-color: transparent transparent #EBF1F6 transparent; }
 
 .tall {
   height: 300px; }
@@ -1094,6 +1094,31 @@ header {
 
   .col-01 {
     margin-right: 0; }
+
+  .content {
+    display: flex; }
+
+  .content img {
+    align-self: flex-start;
+    width: 50%; }
+
+  .flip {
+    flex-direction: row-reverse; }
+
+  .pp {
+    top: 0; }
+
+  .review:after {
+    top: 50%;
+    left: -14.5px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #EBF1F6 transparent transparent; }
+
+  .review:after {
+    top: 50%;
+    left: -14.5px;
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #EBF1F6 transparent transparent; }
 
   h2 {
     display: none; }

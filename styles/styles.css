@@ -936,8 +936,6 @@ header {
   margin-right: 5%; }
 
 .right {
-  display: flex;
-  flex-wrap: wrap;
   width: 28.333333333333333%;
   color: #EBF1F6; }
 
@@ -975,7 +973,7 @@ header {
   padding: 5%;
   width: 100%;
   position: relative;
-  top: -5px;
+  top: -6px;
   background-color: #EBF1F6;
   height: 200px;
   width: 100%; }
@@ -1048,6 +1046,9 @@ header {
   h4 {
     font-size: 1.2em; } }
 @media only screen and (max-width: 480px) {
+  main {
+    margin-top: 0; }
+
   header {
     background-image: none;
     height: 40%; }
@@ -1077,7 +1078,8 @@ header {
       border-bottom: 1px solid #D8C5AF; }
 
   .show .nav-main {
-    height: 155px; }
+    height: 124px;
+    margin-bottom: 40px; }
 
   .nav-main a {
     line-height: 40px;
@@ -1100,7 +1102,7 @@ header {
 
   .content img {
     align-self: flex-start;
-    width: 50%; }
+    width: 100%; }
 
   .flip {
     flex-direction: row-reverse; }
@@ -1110,15 +1112,18 @@ header {
 
   .review:after {
     top: 50%;
-    left: -14.5px;
-    border-width: 15px 15px 15px 0;
+    left: -9.5px;
+    border-width: 10px 10px 10px 0;
     border-color: transparent #EBF1F6 transparent transparent; }
 
-  .review:after {
+  .flip.review:after {
     top: 50%;
     left: -14.5px;
     border-width: 15px 15px 15px 0;
     border-color: transparent #EBF1F6 transparent transparent; }
+
+  .tall {
+    height: 200px; }
 
   h2 {
     display: none; }

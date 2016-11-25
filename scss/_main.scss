@@ -247,8 +247,6 @@ header {
 
 // right column with logo, about etc
 .right {
-    display: flex;
-    flex-wrap: wrap;
     width: 28.333333333333333%;
     color: $mist;
 }
@@ -308,7 +306,7 @@ header {
     padding: 5%;
     width: 100%;
     position: relative;
-    top: -5px;
+    top: -6px;
     background-color: $mist;
     height: 200px;
     width: 100%;
@@ -405,6 +403,10 @@ header {
 
 // ---> phone size
 @media only screen and (max-width: 480px) {
+    main{
+        margin-top: 0;
+    }
+    
     header {
         background-image: none;
         height: 40%;
@@ -437,7 +439,8 @@ header {
         }
     }
     .show .nav-main {
-        height: 155px;
+        height: 124px;
+        margin-bottom: 40px;
     }
     .nav-main a {
         line-height: 40px;
@@ -462,7 +465,7 @@ header {
     }
     .content img {
         align-self: flex-start;
-        width: 50%;
+        width: 100%;
     }
     // reverse every second image  
     .flip {
@@ -473,16 +476,20 @@ header {
     }
     .review:after {
         top: 50%;
+        left: -9.5px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent $mist transparent transparent;
+    }
+    
+     .flip.review:after {
+        top: 50%;
         left: -14.5px;
         border-width: 15px 15px 15px 0;
         border-color: transparent $mist transparent transparent;
     }
     
-     .review:after {
-        top: 50%;
-        left: -14.5px;
-        border-width: 15px 15px 15px 0;
-        border-color: transparent $mist transparent transparent;
+    .tall{
+        height: 200px;
     }
     
     

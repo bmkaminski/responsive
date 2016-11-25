@@ -1133,6 +1133,15 @@ header {
     display: block;
     margin: 0px 10% 40px; }
 
+  .content img {
+    display: block; }
+
+  .content .review {
+    height: auto; }
+
+  .content > * {
+    flex: 0 1 50%; }
+
   .popular {
     font-size: 1em; }
 

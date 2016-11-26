@@ -12,3 +12,5 @@ var $btnMobile = $('.btn-mobile');
 $btnMobile.click(function(){
 	$body.toggleClass('show');
 });
+
+// smooth scroll

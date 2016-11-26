@@ -819,6 +819,9 @@ h4 {
   letter-spacing: .2em;
   color: #131617; }
 
+h6 {
+  float: right; }
+
 h5 {
   margin: 40px 0 25px;
   padding: 10px 20%;
@@ -935,6 +938,12 @@ header {
   width: 66.666666666666667%;
   margin-right: 5%; }
 
+.content {
+  background-color: #EBF1F6; }
+
+.left img:hover {
+  opacity: .8; }
+
 .right {
   width: 28.333333333333333%;
   color: #EBF1F6; }
@@ -969,7 +978,28 @@ header {
 .post-sections li {
   margin-bottom: 5px; }
 
-.review {
+.search {
+  background-color: rgba(235, 241, 246, 0.9);
+  margin-top: 30px;
+  padding: 5px 0; }
+
+input[type=text] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  background-image: url("../images/search-dark.png");
+  background-size: 18px 18px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-size: .9em; }
+
+.review-01,
+.review-02 {
   padding: 5%;
   width: 100%;
   position: relative;
@@ -977,18 +1007,20 @@ header {
   background-color: #EBF1F6;
   height: 200px;
   width: 100%; }
-  .review p {
+  .review-01 p,
+  .review-02 p {
     margin-top: 20px; }
 
-.review:after {
+.review-01:after,
+.review-02:after {
   content: '';
   position: absolute;
-  top: -19.5px;
+  top: -14.5px;
   left: 50%;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0px 20px 20px 20px;
+  border-width: 0px 15px 15px 15px;
   border-color: transparent transparent #EBF1F6 transparent; }
 
 .tall {
@@ -1003,7 +1035,10 @@ header {
 /* -------- media queries -------- */
 @media only screen and (max-width: 1024px) {
   .main-content {
-    min-width: 100%; } }
+    min-width: 100%; }
+
+  .post-sections {
+    width: 90%; } }
 @media only screen and (max-width: 768px) {
   header {
     background-image: url("../images/trees-fog-tablet.jpg");
@@ -1063,7 +1098,7 @@ header {
     height: 0;
     padding-bottom: 0;
     overflow: hidden;
-    transition: height 0.5s ease; }
+    transition: height 0.7s ease; }
 
   .nav-main ul {
     flex-direction: column;
@@ -1090,6 +1125,9 @@ header {
       background-color: #D8C5AF;
       color: #131617; }
 
+  .post-sections {
+    width: 100%; }
+
   .col-01,
   .col-02 {
     width: 100%; }
@@ -1098,7 +1136,8 @@ header {
     margin-right: 0;
     margin-bottom: 0; }
 
-  .col-01 article, .col-02 article {
+  .col-01 article,
+  .col-02 article {
     margin-bottom: 0; }
 
   .col-02 {
@@ -1117,11 +1156,17 @@ header {
   .pp {
     top: 0; }
 
-  .review:after {
+  .review-01:after {
     top: 50%;
     left: -9.5px;
     border-width: 10px 10px 10px 0;
     border-color: transparent #EBF1F6 transparent transparent; }
+
+  .review-02:after {
+    top: 50%;
+    left: 182px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #EBF1F6; }
 
   .tall {
     height: 200px; }
@@ -1137,7 +1182,8 @@ header {
   .content img {
     display: block; }
 
-  .content .review {
+  .content .review-01,
+  .content .review-02 {
     height: auto; }
 
   .content > * {
@@ -1152,12 +1198,6 @@ header {
 
   .post-sections a {
     margin-top: 40px; } }
-@media only screen and (max-width: 375px) {
-  .content {
-    flex-direction: column; }
-
-  .content .review {
-    margin-bottom: 40px; } }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

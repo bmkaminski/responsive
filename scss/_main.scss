@@ -1,7 +1,7 @@
 /* ----------- variables ----------- */
 
 $bold-font: 'Oswald Demi Bold';
-$light-font: 'Oswald Extra Light';
+$light-font: 'Oswald Extra Light'; //open sans
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
@@ -220,7 +220,6 @@ header {
     }
 }
 
-
 /* -------- featured review -------- */
 
 .featured {
@@ -329,7 +328,7 @@ header {
     padding: 5px 0;
 }
 
-input[type=text] {
+input[type = text] {
     width: 100%;
     height: 40px;
     border: none;
@@ -348,6 +347,9 @@ input[type=text] {
 //input[type=text]:focus {
 //    width: 100%;
 //}
+
+//mobile search
+
 
 // -----> create review with triangle pointer
 .review-01,
@@ -393,210 +395,3 @@ input[type=text] {
 .mobile-logo {
     display: none;
 }
-
-
-/* -------- media queries -------- */
-
-@media only screen and (max-width: 1024px) {
-    .main-content {
-        min-width: 100%;
-    }
-    .post-sections {
-        width: 90%;
-    }
-}
-
-// ---> tablet portrait
-@media only screen and (max-width: 768px) {
-    header {
-        background-image: url('../images/trees-fog-tablet.jpg');
-        height: 425px;
-    }
-    .title,
-    .main-logo {
-        display: none;
-    }
-    .mobile-logo {
-        display: block;
-        padding-top: 50px;
-        margin: 0 auto;
-        width: 30%;
-    }
-    // tablet nav    
-    .nav-main ul {
-        justify-content: center;
-    }
-    .nav-main a {
-        padding: 0 25%;
-        color: $mist;
-        &:hover {
-            color: $antique;
-        }
-    }
-    // tablet gallery view    
-    .post-sections {
-        flex-direction: column;
-        width: 96%;
-    }
-    .left,
-    .right {
-        width: 100%;
-    }
-    .left a {
-        margin-left: 5%;
-    }
-    .popular {
-        margin: 0 10%;
-    }
-    h3,
-    h4 {
-        font-size: 1.2em;
-    }
-}
-
-// ---> phone landscape
-@media only screen and (max-width: 480px) {
-    main {
-        margin-top: 0;
-    }
-    header {
-        background-image: none;
-        height: 40%;
-    }
-    .mobile-logo {
-        width: 45%;
-    }
-    // mobile navigation    
-    .btn-mobile {
-        display: block;
-    }
-    .nav-main {
-        height: 0;
-        padding-bottom: 0;
-        //		clear: both;
-        overflow: hidden;
-        transition: height 0.7s ease;
-    }
-    .nav-main ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    .nav-main li {
-        padding-top: 0;
-        padding-left: 0;
-        border-top: 1px solid $antique;
-        &:last-child {
-            padding-right: 0;
-            border-bottom: 1px solid $antique;
-        }
-    }
-    .show .nav-main {
-        height: 124px;
-        margin-bottom: 40px;
-    }
-    .nav-main a {
-        line-height: 40px;
-        display: block;
-        width: 100%;
-        text-transform: uppercase;
-        &:hover {
-            background-color: $antique;
-            color: $midnight;
-        }
-    }
-    // mobile make new gallery 
-    .post-sections {
-        width: 100%;
-    }
-    .col-01,
-    .col-02 {
-        width: 100%;
-    }
-    .col-01 {
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    .col-01 article,
-    .col-02 article {
-        margin-bottom: 0;
-    }
-    .col-02 {
-        margin-top: 0;
-    }
-    .content {
-        display: flex;
-    }
-    .content img {
-        align-self: flex-start;
-        width: 100%;
-    }
-    // reverse every second image  
-    .flip {
-        flex-direction: row-reverse;
-    }
-    .pp {
-        top: 0;
-    }
-    .review-01:after {
-        top: 50%;
-        left: -9.5px;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent $mist transparent transparent;
-    }
-    .review-02:after {
-        top: 50%;
-        left: 182px;
-        border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent $mist;
-    }
-    .tall {
-        height: 200px;
-    }
-    // mobile fonts     
-    h2 {
-        display: none;
-    }
-    .mobile-h3 {
-        font-size: .9em;
-        display: block;
-        margin: 0px 10% 40px;
-    }
-    .content img {
-        display: block;
-    }
-    .content .review-01,
-    .content .review-02 {
-        height: auto;
-    }
-    .content > * {
-        flex: 0 1 50%;
-    }
-    .popular {
-        font-size: 1em;
-    }
-    .left {
-        width: 100%;
-        margin-right: 0;
-    }
-    .post-sections a {
-        margin-top: 40px;
-    }
-}
-
-// ---> phone portrait
-@media only screen and (max-width: 375px) {
-    //    .content{
-    //        flex-direction: column;
-    //    }
-    //    
-    //    .content .review {
-    ////        padding-bottom: 0%;
-    //        margin-bottom: 40px;
-    //    }
-}
-
-//i. Smartphone – portrait (320px wide)
-//ii. Smartphone – landscape (480px wide)
-//iii. Tablet – portrait (768px wide)
-//iv. Tablet – landscape(1024px wide)
-//v. Desktop – widths wider than 1024px

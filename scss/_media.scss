@@ -40,14 +40,25 @@
     .post-sections {
         flex-direction: column;
         width: 96%;
+        border: none;
     }
     .left,
     .right {
         width: 100%;
     }
+    
     .left a {
         margin-left: 5%;
+        padding-bottom: 20px;
     }
+    
+
+    
+    .col-03{
+        padding-bottom: 50px;
+        border-bottom: 1px solid $mist;
+    }
+    
     .popular {
         margin: 0 10%;
     }
@@ -139,7 +150,14 @@
     }
     .pp {
         top: 0;
+        text-align: left;
+        
+        p{
+            display: none;
+        }
+    
     }
+    
     .review-01:after {
         top: 50%;
         left: -9.5px;
@@ -148,7 +166,7 @@
     }
     .review-02:after {
         top: 50%;
-        left: 182px;
+        left: 100%;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent $mist;
     }
@@ -160,7 +178,7 @@
         display: none;
     }
     .mobile-h3 {
-        font-size: .9em;
+        font-size: 1em;
         display: block;
         margin: 0px 10% 40px;
     }
@@ -188,6 +206,9 @@
 
 // ---> phone portrait
 @media only screen and (max-width: 375px) {
+    
+   
+    
     //    .content{
     //        flex-direction: column;
     //    }

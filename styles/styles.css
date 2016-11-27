@@ -766,22 +766,24 @@ table {
 /* ----------- variables ----------- */
 /* ---------- main styles ---------- */
 body {
-  background-color: #131617;
-  font-family: "Oswald Extra Light";
-  letter-spacing: .2em;
-  line-height: 14.4pt; }
+  background-color: #131617; }
 
 main {
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-family: "Open Sans";
+  letter-spacing: .2em;
+  line-height: 14.4pt;
+  font-size: .9em; }
 
 /* -------- heading styles -------- */
 h2 {
+  margin-bottom: 20px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: #131617; }
 
 h2 span {
@@ -789,7 +791,7 @@ h2 span {
   position: relative;
   padding: 5px 25px;
   background-color: #EBF1F6;
-  z-index: 38; }
+  z-index: 36; }
 
 h2:after {
   content: '';
@@ -807,7 +809,7 @@ h3 {
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #EBF1F6; }
 
 .mobile-h3 {
@@ -817,10 +819,8 @@ h4 {
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
-  color: #131617; }
-
-h6 {
-  float: right; }
+  color: #131617;
+  font-size: 1.2em; }
 
 h5 {
   margin: 40px 0 25px;
@@ -830,7 +830,11 @@ h5 {
   text-transform: uppercase;
   font-family: "Oswald Demi Bold";
   letter-spacing: .2em;
-  font-size: 1.2em; }
+  font-size: 1.3em; }
+
+h6 {
+  padding-bottom: 5px;
+  color: #D8C5AF; }
 
 /* --------- hero image --------- */
 header {
@@ -874,7 +878,7 @@ header {
   text-transform: uppercase;
   font-size: 1em;
   color: #EBF1F6; }
-  .btn-mobile:hover {
+  .btn-mobile:hover, .btn-mobile:active, .btn-mobile:focus {
     color: #D8C5AF; }
 
 .title {
@@ -920,14 +924,28 @@ header {
   justify-content: center; }
 
 .main-content {
-  max-width: 65%; }
+  max-width: 65%;
+  font-size: .8em; }
+
+.mid-review {
+  display: flex; }
+  .mid-review a {
+    margin-top: 30px;
+    margin-left: 4%;
+    font-family: "Oswald Demi Bold";
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #131617; }
+    .mid-review a:hover {
+      text-decoration: underline; }
 
 /* -------- popular reviews -------- */
 .post-sections {
   display: flex;
   width: 80%;
   margin: 65px auto;
-  font-size: .8em; }
+  font-size: .8em;
+  border-bottom: 1px solid #EBF1F6; }
 
 .popular {
   flex-basis: 100%; }
@@ -938,15 +956,14 @@ header {
   width: 66.666666666666667%;
   margin-right: 5%; }
 
+.left a {
+  padding-bottom: 50px; }
+
 .content {
   background-color: #EBF1F6; }
 
 .left img:hover {
   opacity: .8; }
-
-.right {
-  width: 28.333333333333333%;
-  color: #EBF1F6; }
 
 .col-01,
 .col-02 {
@@ -963,6 +980,11 @@ header {
 .col-02 article {
   margin-bottom: 15px; }
 
+/* -------- right sidebar -------- */
+.right {
+  width: 28.333333333333333%;
+  color: #EBF1F6; }
+
 .col-03 {
   margin: 0 10%; }
 
@@ -978,6 +1000,11 @@ header {
 .post-sections li {
   margin-bottom: 5px; }
 
+.post-sections ul > li {
+  list-style: circle;
+  margin-left: 60px;
+  font-size: .8em; }
+
 .search {
   background-color: rgba(235, 241, 246, 0.9);
   margin-top: 30px;
@@ -987,7 +1014,6 @@ input[type=text] {
   width: 100%;
   height: 40px;
   border: none;
-  border-radius: 20px;
   background-color: transparent;
   background-image: url("../images/search-dark.png");
   background-size: 18px 18px;
@@ -998,15 +1024,24 @@ input[type=text] {
   transition: width 0.4s ease-in-out;
   font-size: .9em; }
 
+.social {
+  margin-top: 20px;
+  text-align: center; }
+  .social a {
+    color: #D8C5AF; }
+    .social a:hover {
+      color: #EBF1F6; }
+  .social .fa {
+    margin: 0 2%; }
+
 .review-01,
 .review-02 {
-  padding: 5%;
+  padding: 4%;
   width: 100%;
+  height: 200px;
   position: relative;
   top: -6px;
-  background-color: #EBF1F6;
-  height: 200px;
-  width: 100%; }
+  background-color: #EBF1F6; }
   .review-01 p,
   .review-02 p {
     margin-top: 20px; }
@@ -1027,10 +1062,20 @@ input[type=text] {
   height: 300px; }
 
 .pp {
+  text-align: justify;
   padding: 10%; }
+  .pp p {
+    padding-bottom: 20px; }
+  .pp a {
+    color: #131617; }
+    .pp a:hover {
+      color: #D8C5AF; }
 
 .mobile-logo {
   display: none; }
+
+footer {
+  height: 150px; }
 
 /* -------- media queries -------- */
 @media only screen and (max-width: 1024px) {
@@ -1065,14 +1110,20 @@ input[type=text] {
 
   .post-sections {
     flex-direction: column;
-    width: 96%; }
+    width: 96%;
+    border: none; }
 
   .left,
   .right {
     width: 100%; }
 
   .left a {
-    margin-left: 5%; }
+    margin-left: 5%;
+    padding-bottom: 20px; }
+
+  .col-03 {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #EBF1F6; }
 
   .popular {
     margin: 0 10%; }
@@ -1154,7 +1205,10 @@ input[type=text] {
     flex-direction: row-reverse; }
 
   .pp {
-    top: 0; }
+    top: 0;
+    text-align: left; }
+    .pp p {
+      display: none; }
 
   .review-01:after {
     top: 50%;
@@ -1164,7 +1218,7 @@ input[type=text] {
 
   .review-02:after {
     top: 50%;
-    left: 182px;
+    left: 100%;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #EBF1F6; }
 
@@ -1175,7 +1229,7 @@ input[type=text] {
     display: none; }
 
   .mobile-h3 {
-    font-size: .9em;
+    font-size: 1em;
     display: block;
     margin: 0px 10% 40px; }
 

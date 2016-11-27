@@ -33,10 +33,3 @@ $btnMobile.click(function(){
 //if ($text <= 'width: 480px'){
 //    $text.html('read more...');
 //}
-
-
- $(window).resize(function() {
-  if ($(window).width() <= 480) {
-     $('.pp p').html('click to read more...');
-  }
-});

@@ -1,7 +1,7 @@
 /* ----------- variables ----------- */
 
 $bold-font: 'Oswald Demi Bold';
-$light-font: 'Oswald Extra Light'; //open sans
+$light-font: 'Open Sans'; //open sans
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
@@ -10,13 +10,14 @@ $mist: #EBF1F6;
 
 body {
     background-color: $midnight;
-    font-family: $light-font;
-    letter-spacing: .2em;
-    line-height: 14.4pt;
 }
 
 main {
     margin-top: 50px;
+    font-family: $light-font;
+    letter-spacing: .2em;
+    line-height: 14.4pt;
+    font-size: .9em;
 }
 
 
@@ -24,12 +25,13 @@ main {
 
 // h2 set between bars 
 h2 {
+    margin-bottom: 20px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
     font-family: $bold-font;
     letter-spacing: .2em;
-    font-size: 1.4em;
+    font-size: 1.5em;
     color: $midnight;
 }
 
@@ -38,7 +40,7 @@ h2 span {
     position: relative;
     padding: 5px 25px;
     background-color: $mist;
-    z-index: 38;
+    z-index: 36;
 }
 
 h2:after {
@@ -59,7 +61,7 @@ h3 {
     text-transform: uppercase;
     font-family: $bold-font;
     letter-spacing: .2em;
-    font-size: 1.3em;
+    font-size: 1.4em;
     color: $mist;
 }
 
@@ -73,10 +75,25 @@ h4 {
     font-family: $bold-font;
     letter-spacing: .2em;
     color: $midnight;
+    font-size: 1.2em;
 }
 
-h6 {
-    float: right;
+// sidebar border-box title
+h5 {
+    margin: 40px 0 25px;
+    padding: 10px 20%;
+    border: 1px solid $mist;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $bold-font;
+    letter-spacing: .2em;
+    font-size: 1.3em;
+}
+
+h6{
+    padding-bottom: 5px;
+    color: $antique;
+//    border-bottom: 1px solid $antique;
 }
 
 //.date{
@@ -87,17 +104,7 @@ h6 {
 //        border-top: 1px solid $midnight;
 //    }
 //}
-// sidebar border-box title
-h5 {
-    margin: 40px 0 25px;
-    padding: 10px 20%;
-    border: 1px solid $mist;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $bold-font;
-    letter-spacing: .2em;
-    font-size: 1.2em;
-}
+
 
 
 /* --------- hero image --------- */
@@ -157,7 +164,9 @@ header {
     text-transform: uppercase;
     font-size: 1em;
     color: $mist;
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         color: $antique;
     }
 }
@@ -230,6 +239,23 @@ header {
 // main featured post size
 .main-content {
     max-width: 65%;
+    font-size: .8em;
+}
+
+.mid-review{
+    display: flex;
+    
+    a{
+        margin-top: 30px;
+        margin-left: 4%;
+        font-family: $bold-font;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $midnight;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
 
 
@@ -241,6 +267,7 @@ header {
     width: 80%;
     margin: 65px auto;
     font-size: .8em;
+    border-bottom: 1px solid $mist;
 }
 
 // h3 "popular reviews"
@@ -256,6 +283,10 @@ header {
     margin-right: 5%;
 }
 
+.left a{
+        padding-bottom: 50px;
+}
+
 // image hover light opacity
 .content {
     background-color: $mist;
@@ -263,12 +294,6 @@ header {
 
 .left img:hover {
     opacity: .8;
-}
-
-// right column with logo, about etc
-.right {
-    width: 28.333333333333333%;
-    color: $mist;
 }
 
 // image columns 
@@ -295,6 +320,15 @@ header {
     }
 }
 
+/* -------- right sidebar -------- */
+
+
+// right column with logo, about etc
+.right {
+    width: 28.333333333333333%;
+    color: $mist;
+}
+
 // column within sidebar class right
 .col-03 {
     margin: 0 10%;
@@ -304,6 +338,7 @@ header {
 .main-logo {
     display: block;
 }
+
 
 // link styles in main
 .post-sections a {
@@ -321,6 +356,14 @@ header {
     }
 }
 
+// sub list
+.post-sections ul > li {
+    list-style: circle;
+    margin-left: 60px;
+    font-size: .8em;
+}
+
+
 //search bar
 .search {
     background-color: rgba(235, 241, 246, .9);
@@ -332,7 +375,6 @@ input[type = text] {
     width: 100%;
     height: 40px;
     border: none;
-    border-radius: 20px;
     background-color: transparent;
     background-image: url('../images/search-dark.png');
     background-size: 18px 18px;
@@ -343,24 +385,36 @@ input[type = text] {
     transition: width 0.4s ease-in-out;
     font-size: .9em;
 }
-//
-//input[type=text]:focus {
-//    width: 100%;
-//}
 
-//mobile search
+//social media icons
+
+.social{
+    margin-top: 20px;
+    text-align: center;
+    
+    a{
+        color: $antique;
+        &:hover{
+            color: $mist;
+        }
+    }
+    
+    
+    .fa{
+        margin: 0 2%;
+    }
+}
 
 
 // -----> create review with triangle pointer
 .review-01,
 .review-02 {
-    padding: 5%;
+    padding: 4%;
     width: 100%;
+    height: 200px;
     position: relative;
     top: -6px;
     background-color: $mist;
-    height: 200px;
-    width: 100%;
     p {
         margin-top: 20px;
     }
@@ -388,10 +442,27 @@ input[type = text] {
 
 // popular posts styles 
 .pp {
+    text-align: justify;
     padding: 10%;
+    
+    p{
+        padding-bottom: 20px;
+    }
+    
+    a{
+        color: $midnight;
+        &:hover{
+            color: $antique;
+        }
+    }
 }
 
 // hide mobile logo
 .mobile-logo {
     display: none;
+}
+
+
+footer{
+    height: 150px;
 }

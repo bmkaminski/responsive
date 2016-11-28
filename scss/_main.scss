@@ -1,7 +1,9 @@
 /* ----------- variables ----------- */
 
-$bold-font: 'Oswald Demi Bold', sans-serif;
-$light-font: 'Open Sans', sans-serif; //open sans
+$bold-font: 'Oswald Demi Bold',
+sans-serif;
+$light-font: 'Open Sans',
+sans-serif; //open sans
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
@@ -13,11 +15,12 @@ body {
     font-family: $light-font;
     letter-spacing: .065em;
     line-height: 14.4pt;
+        font-size: .95em;
 }
 
+// all content below header img/text
 main {
     margin-top: 50px;
-    font-size: .95em;
 }
 
 
@@ -65,6 +68,7 @@ h3 {
     color: $mist;
 }
 
+// hide mobile title
 .mobile-h3 {
     display: none;
 }
@@ -90,21 +94,11 @@ h5 {
     font-size: 1.3em;
 }
 
-h6{
+h6 {
     padding-bottom: 5px;
     color: $antique;
-//    border-bottom: 1px solid $antique;
+    //    border-bottom: 1px solid $antique;
 }
-
-//.date{
-//    font-size: .9em;
-//    text-transform: lowercase;
-//    padding-bottom: 15px;
-//    &:after{
-//        border-top: 1px solid $midnight;
-//    }
-//}
-
 
 
 /* --------- hero image --------- */
@@ -223,16 +217,18 @@ header {
     animation: fade 2s 4s ease forwards;
 }
 
+// fade in london fog title
 @keyframes fade {
     100% {
         opacity: 1;
     }
 }
 
+
 /* -------- featured review -------- */
 
-
-.mobile-img{
+// hide non-gif 
+.mobile-img {
     display: none;
 }
 
@@ -247,22 +243,21 @@ header {
     font-size: .8em;
 }
 
-.mid-review{
+// featured review 
+.mid-review {
     display: flex;
-    
-    .mid-left{
+    .mid-left {
         flex-direction: column;
         margin-right: 8%;
     }
-    
-    a{
+    a {
         margin-top: 5px;
         margin-left: 4%;
         font-family: $bold-font;
         text-decoration: none;
         text-transform: uppercase;
         color: $midnight;
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }
@@ -293,8 +288,8 @@ header {
     margin-right: 5%;
 }
 
-.left a{
-        padding-bottom: 50px;
+.left a {
+    padding-bottom: 50px;
 }
 
 // image hover light opacity
@@ -330,13 +325,14 @@ header {
     }
 }
 
-.back{
+// older posts link
+.back {
     margin-left: 2%;
     text-align: left;
 }
 
-/* -------- right sidebar -------- */
 
+/* -------- right sidebar -------- */
 
 // right column with logo, about etc
 .right {
@@ -354,7 +350,6 @@ header {
     display: block;
 }
 
-
 // link styles in main
 .post-sections a {
     text-decoration: none;
@@ -371,13 +366,12 @@ header {
     }
 }
 
-// sub list
+// sub list - locations
 .post-sections ul > li {
     list-style: circle;
     margin-left: 60px;
     font-size: .8em;
 }
-
 
 //search bar
 .search {
@@ -386,7 +380,7 @@ header {
     padding: 5px 0;
 }
 
-input[type = text] {
+input[type=text] {
     width: 100%;
     height: 40px;
     border: none;
@@ -402,26 +396,21 @@ input[type = text] {
 }
 
 //social media icons
-
-.social{
+.social {
     margin-top: 20px;
     text-align: center;
-    
-    a{
+    a {
         color: $antique;
-        &:hover{
+        &:hover {
             color: $mist;
         }
     }
-    
-    
-    .fa{
+    .fa {
         margin: 0 2%;
     }
 }
 
-
-// -----> create review with triangle pointer
+// create review with triangle pointer
 .review-01,
 .review-02 {
     padding: 4%;
@@ -456,16 +445,14 @@ input[type = text] {
 .pp {
     text-align: justify;
     padding: 10%;
-    
-    p{
+    p {
         margin-top: 5%;
         padding-bottom: 5%;
     }
-    
-    a{
+    a {
         font-family: $bold-font;
         color: $midnight;
-        &:hover{
+        &:hover {
             color: $antique;
         }
     }
@@ -477,9 +464,21 @@ input[type = text] {
 }
 
 
-footer{
+/* ----------- footer ----------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
     margin-left: 10%;
     height: 150px;
     font-size: .75em;
     color: $antique;
+    nav {
+        ul {
+            display: flex;
+        }
+        li {
+            padding-right: 1%;
+        }
+    }
 }

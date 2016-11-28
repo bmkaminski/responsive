@@ -769,11 +769,11 @@ body {
   background-color: #131617;
   font-family: "Open Sans", sans-serif;
   letter-spacing: .065em;
-  line-height: 14.4pt; }
+  line-height: 14.4pt;
+  font-size: .95em; }
 
 main {
-  margin-top: 50px;
-  font-size: .95em; }
+  margin-top: 50px; }
 
 /* -------- heading styles -------- */
 h2 {
@@ -1083,11 +1083,18 @@ input[type=text] {
 .mobile-logo {
   display: none; }
 
+/* ----------- footer ----------- */
 footer {
+  display: flex;
+  flex-direction: column;
   margin-left: 10%;
   height: 150px;
   font-size: .75em;
   color: #D8C5AF; }
+  footer nav ul {
+    display: flex; }
+  footer nav li {
+    padding-right: 1%; }
 
 /* -------- media queries -------- */
 @media only screen and (max-width: 1024px) {

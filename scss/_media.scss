@@ -1,5 +1,6 @@
 /* -------- media queries -------- */
 
+// ---> tablet landscape &+
 @media only screen and (max-width: 1024px) {
     .main-content {
         min-width: 100%;
@@ -9,6 +10,7 @@
     }
 }
 
+// fix breaking cafe name header 
 @media only screen and (max-width: 900px) {
     
     h4{
@@ -17,13 +19,14 @@
     
 }
 
-
 // ---> tablet portrait
 @media only screen and (max-width: 768px) {
+    // change bg
     header {
         background-image: url('../images/trees-fog-tablet.jpg');
         height: 425px;
     }
+    // hide intro title
     .title,
     .main-logo {
         display: none;
@@ -34,7 +37,7 @@
         margin: 0 auto;
         width: 30%;
     }
-    // tablet nav    
+    //---> tablet nav    
     .nav-main ul {
         justify-content: center;
     }
@@ -51,6 +54,7 @@
         width: 96%;
         border: none;
     }
+    // fill screen with cols
     .left,
     .right {
         width: 100%;
@@ -59,22 +63,23 @@
     .left a {
         padding-bottom: 20px;
     }
-    
+    // older posts
     .back{
         margin-left: 10%;
         text-align: center;
     }
 
-    
+    // right column
     .col-03{
         padding-bottom: 50px;
         border-bottom: 1px solid $mist;
     }
-    
+    // fix breaking popular review h3
     .popular {
         margin: 0 10%;
     }
     
+    // cafe name in reviews
     h4{
         font-size: 1.2em;
     }
@@ -86,10 +91,12 @@
     main {
         margin-top: 0;
     }
+    // remove bg image
     header {
         background-image: none;
         height: 40%;
     }
+    // resize mobile logo 
     .mobile-logo {
         width: 45%;
     }

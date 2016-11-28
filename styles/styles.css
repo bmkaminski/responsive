@@ -766,14 +766,14 @@ table {
 /* ----------- variables ----------- */
 /* ---------- main styles ---------- */
 body {
-  background-color: #131617; }
+  background-color: #131617;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: .065em;
+  line-height: 14.4pt; }
 
 main {
   margin-top: 50px;
-  font-family: "Open Sans";
-  letter-spacing: .2em;
-  line-height: 14.4pt;
-  font-size: .9em; }
+  font-size: .95em; }
 
 /* -------- heading styles -------- */
 h2 {
@@ -781,7 +781,7 @@ h2 {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   letter-spacing: .2em;
   font-size: 1.5em;
   color: #131617; }
@@ -807,7 +807,7 @@ h3 {
   border: 1px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   letter-spacing: .2em;
   font-size: 1.4em;
   color: #EBF1F6; }
@@ -817,7 +817,7 @@ h3 {
 
 h4 {
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   letter-spacing: .2em;
   color: #131617;
   font-size: 1.2em; }
@@ -828,7 +828,7 @@ h5 {
   border: 1px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   letter-spacing: .2em;
   font-size: 1.3em; }
 
@@ -855,12 +855,12 @@ header {
   padding-left: 5%; }
 
 .nav-main li:last-child {
-  padding-right: 5%; }
+  padding-right: 8%; }
 
 .nav-main a {
   text-decoration: none;
   letter-spacing: .3em;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   font-size: 14px;
   color: #131617;
   transition: 0.3s ease; }
@@ -873,7 +873,7 @@ header {
   margin: 20px auto;
   background-color: transparent;
   border: none;
-  font-family: "Oswald Demi Bold";
+  font-family: "Oswald Demi Bold", sans-serif;
   letter-spacing: .2em;
   text-transform: uppercase;
   font-size: 1em;
@@ -919,6 +919,9 @@ header {
   100% {
     opacity: 1; } }
 /* -------- featured review -------- */
+.mobile-img {
+  display: none; }
+
 .featured {
   display: flex;
   justify-content: center; }
@@ -929,10 +932,13 @@ header {
 
 .mid-review {
   display: flex; }
+  .mid-review .mid-left {
+    flex-direction: column;
+    margin-right: 8%; }
   .mid-review a {
-    margin-top: 30px;
+    margin-top: 5px;
     margin-left: 4%;
-    font-family: "Oswald Demi Bold";
+    font-family: "Oswald Demi Bold", sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     color: #131617; }
@@ -973,12 +979,16 @@ header {
 
 .col-01 {
   margin-bottom: 50px;
-  margin-right: 1.5%; }
+  margin-right: .2%; }
   .col-01 article {
     margin-bottom: 15px; }
 
 .col-02 article {
   margin-bottom: 15px; }
+
+.back {
+  margin-left: 2%;
+  text-align: left; }
 
 /* -------- right sidebar -------- */
 .right {
@@ -1042,9 +1052,6 @@ input[type=text] {
   position: relative;
   top: -6px;
   background-color: #EBF1F6; }
-  .review-01 p,
-  .review-02 p {
-    margin-top: 20px; }
 
 .review-01:after,
 .review-02:after {
@@ -1065,8 +1072,10 @@ input[type=text] {
   text-align: justify;
   padding: 10%; }
   .pp p {
-    padding-bottom: 20px; }
+    margin-top: 5%;
+    padding-bottom: 5%; }
   .pp a {
+    font-family: "Oswald Demi Bold", sans-serif;
     color: #131617; }
     .pp a:hover {
       color: #D8C5AF; }
@@ -1075,7 +1084,10 @@ input[type=text] {
   display: none; }
 
 footer {
-  height: 150px; }
+  margin-left: 10%;
+  height: 150px;
+  font-size: .75em;
+  color: #D8C5AF; }
 
 /* -------- media queries -------- */
 @media only screen and (max-width: 1024px) {
@@ -1084,6 +1096,9 @@ footer {
 
   .post-sections {
     width: 90%; } }
+@media only screen and (max-width: 900px) {
+  h4 {
+    font-size: 1.1em; } }
 @media only screen and (max-width: 768px) {
   header {
     background-image: url("../images/trees-fog-tablet.jpg");
@@ -1118,8 +1133,11 @@ footer {
     width: 100%; }
 
   .left a {
-    margin-left: 5%;
     padding-bottom: 20px; }
+
+  .back {
+    margin-left: 10%;
+    text-align: center; }
 
   .col-03 {
     padding-bottom: 50px;
@@ -1128,7 +1146,6 @@ footer {
   .popular {
     margin: 0 10%; }
 
-  h3,
   h4 {
     font-size: 1.2em; } }
 @media only screen and (max-width: 480px) {
@@ -1251,7 +1268,13 @@ footer {
     margin-right: 0; }
 
   .post-sections a {
-    margin-top: 40px; } }
+    margin-top: 40px; }
+
+  .stop-motion {
+    display: none; }
+
+  .mobile-img {
+    display: block; } }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

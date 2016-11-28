@@ -9,6 +9,15 @@
     }
 }
 
+@media only screen and (max-width: 900px) {
+    
+    h4{
+        font-size: 1.1em;
+    }
+    
+}
+
+
 // ---> tablet portrait
 @media only screen and (max-width: 768px) {
     header {
@@ -48,10 +57,13 @@
     }
     
     .left a {
-        margin-left: 5%;
         padding-bottom: 20px;
     }
     
+    .back{
+        margin-left: 10%;
+        text-align: center;
+    }
 
     
     .col-03{
@@ -62,10 +74,11 @@
     .popular {
         margin: 0 10%;
     }
-    h3,
-    h4 {
+    
+    h4{
         font-size: 1.2em;
     }
+
 }
 
 // ---> phone landscape
@@ -201,6 +214,14 @@
     }
     .post-sections a {
         margin-top: 40px;
+    }
+    
+    .stop-motion{
+        display: none;
+    }
+    
+    .mobile-img{
+        display: block;
     }
 }
 

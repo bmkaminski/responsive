@@ -1,7 +1,7 @@
 /* ----------- variables ----------- */
 
-$bold-font: 'Oswald Demi Bold';
-$light-font: 'Open Sans'; //open sans
+$bold-font: 'Oswald Demi Bold', sans-serif;
+$light-font: 'Open Sans', sans-serif; //open sans
 $midnight: #131617;
 $antique: #D8C5AF;
 $mist: #EBF1F6;
@@ -10,14 +10,14 @@ $mist: #EBF1F6;
 
 body {
     background-color: $midnight;
+    font-family: $light-font;
+    letter-spacing: .065em;
+    line-height: 14.4pt;
 }
 
 main {
     margin-top: 50px;
-    font-family: $light-font;
-    letter-spacing: .2em;
-    line-height: 14.4pt;
-    font-size: .9em;
+    font-size: .95em;
 }
 
 
@@ -135,7 +135,7 @@ header {
 }
 
 .nav-main li:last-child {
-    padding-right: 5%;
+    padding-right: 8%;
 }
 
 .nav-main a {
@@ -231,6 +231,11 @@ header {
 
 /* -------- featured review -------- */
 
+
+.mobile-img{
+    display: none;
+}
+
 .featured {
     display: flex;
     justify-content: center;
@@ -245,8 +250,13 @@ header {
 .mid-review{
     display: flex;
     
+    .mid-left{
+        flex-direction: column;
+        margin-right: 8%;
+    }
+    
     a{
-        margin-top: 30px;
+        margin-top: 5px;
         margin-left: 4%;
         font-family: $bold-font;
         text-decoration: none;
@@ -307,7 +317,7 @@ header {
 // leftmost image column 
 .col-01 {
     margin-bottom: 50px;
-    margin-right: 1.5%;
+    margin-right: .2%;
     article {
         margin-bottom: 15px;
     }
@@ -318,6 +328,11 @@ header {
     article {
         margin-bottom: 15px;
     }
+}
+
+.back{
+    margin-left: 2%;
+    text-align: left;
 }
 
 /* -------- right sidebar -------- */
@@ -415,9 +430,6 @@ input[type = text] {
     position: relative;
     top: -6px;
     background-color: $mist;
-    p {
-        margin-top: 20px;
-    }
 }
 
 // triangle for reviews 
@@ -446,10 +458,12 @@ input[type = text] {
     padding: 10%;
     
     p{
-        padding-bottom: 20px;
+        margin-top: 5%;
+        padding-bottom: 5%;
     }
     
     a{
+        font-family: $bold-font;
         color: $midnight;
         &:hover{
             color: $antique;
@@ -464,5 +478,8 @@ input[type = text] {
 
 
 footer{
+    margin-left: 10%;
     height: 150px;
+    font-size: .75em;
+    color: $antique;
 }

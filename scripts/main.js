@@ -25,11 +25,25 @@ $btnMobile.click(function(){
 // smooth scroll
 
 
-
-// mobile text
-
-//var $text = $('.review');
-//
-//if ($text <= 'width: 480px'){
-//    $text.html('read more...');
-//}
+$('a[href^="#link"]').click(function(event){
+      var target = $( $(this).attr('href') );
+      
+    if( $(this).parents('header').hasClass('fixed') ){
+          
+          if(target.length) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: target.offset().top}, 800);
+            $('.tutorial').css('margin-top', '1px');
+          }
+          
+      }else {
+          
+          if(target.length) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop: target.offset().top + 100}, 800);
+            $('.tutorial').css('margin-top', '1px');
+          }
+          
+      }
+      
+    });

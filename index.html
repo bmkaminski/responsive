@@ -24,7 +24,7 @@
             </div> <!-- end of mobile nav -->
             <nav class="nav-main">
                 <ul>
-                    <li class="dropdown"><a href="#">reviews</a>
+                    <li class="dropdown"><a href="#link">reviews</a>
                         <!--
                     <ul>
                         <li><a href="#">text</a></li>
@@ -35,7 +35,7 @@
                     </li>
                     <li><a href="#">about</a></li>
                     <li><a href="#">contact</a></li>
-                    <li></li>
+        
                 </ul>
                 
                 
@@ -56,7 +56,7 @@
             <!-- end of london fog svg -->
         </header>
         <main>
-            <article class="featured">
+            <article class="featured" data-aos="fade-up">
                
               
                 <div class="main-content"> 
@@ -64,12 +64,30 @@
                    
                     <h3 class="mobile-h3">Lastest Review</h3>
                
-                   
-                   <img src="images/lastest-post-faded.jpg" alt="A notebook and latte on a table">
+                <div class="mobile-img">
+                    
+                    <img src="images/lastest-post-faded.jpg" alt="A notebook and latte on a table">
+                    
+                </div>
+                  
+                  <div class="stop-motion">
+                  
+                   <img src="images/lastest-post-faded.jpg">
+                  
+                      
+<!--                         <img src="images/stop-motion.gif" alt="A notebook and latte on a table">-->
+                      
+                  </div>
+                  
+                
                     <div class="review-01">
                         <h2><span>Lastest Review</span></h2>
                         <div class="mid-review">
-                        <p><h4>Stomping Grounds</h4>
+                        <div class="mid-left">
+                      <h4>Stomping Grounds</h4>
+                           <h6>09.05.16</h6>
+                            </div>
+                             <p>
                         Cinnamon decaffeinated, lungo viennese so single shot extra mazagran brewed single origin eu single origin. Dripper sugar aftertaste flavour wings brewed, whipped beans half and half strong single origin.</p>
                         <a href="#">Read more...</a>
                         </div>
@@ -80,11 +98,12 @@
             </article>
             <!-- end of featured -->
 
-                <div class="post-sections">
-                    <section id="#reviews" class="left">
+                <div class="post-sections" id="link">
+                   
+                    <section class="left">
                         <h3 class="popular">Popular Reviews</h3>
                         <div class="col-01">
-                            <article>
+                            <article data-aos="fade-up">
                                
                                
                                 <div class="content">
@@ -97,7 +116,7 @@
                                     <source srcset="images/post-01.jpg" media="(max-width:375px)">
 -->
                                     
-                                     <img src="images/post-01.jpg">
+                                     <img src="images/post-01.jpg" alt="A latte on a marble counter">
                                      
                                      </picture>
                                      
@@ -107,11 +126,11 @@
 projecting slides of cozy lives on the wall.
 In the light I thought I saw you,
 or was it nothing at all?</p>
-                                   <a href="#">click for more...</a>
+                                   <a href="#">click to read...</a>
                                     </div>
                                 </div>
                             </article>
-                            <article>
+                            <article data-aos="fade-up">
                                 <div class="content flip"> 
                                    
                                    
@@ -119,7 +138,7 @@ or was it nothing at all?</p>
                                     
                                     <source srcset="images/square-03.jpg" media="(max-width:480px)">
                                     
-                                     <img src="images/post-03.jpg">
+                                     <img src="images/post-03.jpg" alt="View of a cafe interior">
                                      
                                      </picture>
                                    
@@ -130,9 +149,9 @@ or was it nothing at all?</p>
                                         
                                         
                                         
-                                        <p>I’m the hero of this story i don’t need to be saved...</p>
+                                        <p>But if the silence takes you, then I hope it takes me too...</p>
                                          
-                                           <a href="#">click for more...</a>
+                                           <a href="#">click to read...</a>
                                            
                                              </div>
                                 </div>
@@ -140,14 +159,14 @@ or was it nothing at all?</p>
                         </div>
                         <!-- end of col 1 -->
                         <div class="col-02">
-                            <article>
+                            <article data-aos="fade-up">
                                 <div class="content"> 
                                  
                                     <picture>
                                     
                                     <source srcset="images/square-02.jpg" media="(max-width:480px)">
                                     
-                                     <img src="images/post-02.jpg">
+                                     <img src="images/post-02.jpg" alt="A latte on an outdoor patio table">
                                      
                                      </picture>
                                    
@@ -157,19 +176,19 @@ or was it nothing at all?</p>
                                         
                                          <p>Everything that happens is from now on...</p>
                                          
-                                          <a href="#">click for more...</a>
+                                          <a href="#">click to read...</a>
                                           
                                             </div>
                                 </div>
                             </article>
-                            <article>
+                            <article data-aos="fade-up">
                                 <div class="content flip"> 
                                    
                                       <picture>
                                     
                                     <source srcset="images/square-04.jpg" media="(max-width:480px)">
                                     
-                                     <img src="images/post-04.jpg">
+                                     <img src="images/post-04.jpg" alt="Warm drinks and food on a table">
                                      
                                      </picture>
                                    
@@ -179,14 +198,14 @@ or was it nothing at all?</p>
                                         
                                        <p>Fractured moonlight on the sea, reflections still look the same to me, as before I went under... </p>
                                         
-                                          <a href="#">click for more...</a> 
+                                          <a href="#">click to read...</a> 
                                         </div>
                                 </div>
                             </article>
                         </div>
                         <!-- end of col 2 -->
                         
-                                 <a href="#">&lt; Older Posts</a> 
+                                 <a class="back" href="#">&lt; Older Posts</a> 
                     </section>
                     <!-- end of left section -->
                     <section class="right">
@@ -222,20 +241,21 @@ or was it nothing at all?</p>
                             <ul>
                                 <li><a href="#">Vancouver</a>
                                 <ul>
-                                 <li><a href="#">Downtown (5)</a></li>
+                                 <li><a href="#">Downtown (4)</a></li>
                                    <li><a href="#">Gastown (2)</a></li>
-                                  <li><a href="#">Kits (3)</a></li>
+                                  <li><a href="#">Kitsilano (5)</a></li>
                                   </ul>
                                 </li>
                                 <li><a href="#">Port Moody (2)</a></li>
                                 <li><a href="#">Langley</a>
                                 <ul>
                                     
-                                    <li>Fort Langley (3)</li>
+                                 <li><a href="#">Fort Langley (3)</a></li>
                                 </ul>
                                 
                                 </li>
-                                <li><a href="#">Pitt Meadows (1)</a></li>
+                                <li><a href="#">Pitt Meadows (1)</a>
+                                </li>
                             </ul>
                         </div>
                     </section>
@@ -247,12 +267,15 @@ or was it nothing at all?</p>
             
           
         </main>
-        <footer>
+        
+        
+                <footer>
             
             
-            
+            <p>&copy; Brooke Kaminski 2015 | For educational purposes only | Credits</p>
             
         </footer>
+
         </div>
         <!-- end of wrapper -->
         

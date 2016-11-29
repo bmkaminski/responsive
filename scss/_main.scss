@@ -1,6 +1,6 @@
 /* ----------- variables ----------- */
 
-$bold-font: 'Oswald Demi Bold',
+$bold-font: 'Oswald Demi Bold', 'Oswald',
 sans-serif;
 $light-font: 'Open Sans',
 sans-serif; //open sans
@@ -145,6 +145,7 @@ header {
         color: $mist;
     }
 }
+
 
 // hidden mobile menu
 .btn-mobile {

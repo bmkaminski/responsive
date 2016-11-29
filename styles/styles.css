@@ -781,7 +781,7 @@ h2 {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   letter-spacing: .2em;
   font-size: 1.5em;
   color: #131617; }
@@ -807,7 +807,7 @@ h3 {
   border: 1px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   letter-spacing: .2em;
   font-size: 1.4em;
   color: #EBF1F6; }
@@ -817,7 +817,7 @@ h3 {
 
 h4 {
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   letter-spacing: .2em;
   color: #131617;
   font-size: 1.2em; }
@@ -828,7 +828,7 @@ h5 {
   border: 1px solid #EBF1F6;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   letter-spacing: .2em;
   font-size: 1.3em; }
 
@@ -860,7 +860,7 @@ header {
 .nav-main a {
   text-decoration: none;
   letter-spacing: .3em;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   font-size: 14px;
   color: #131617;
   transition: 0.3s ease; }
@@ -873,7 +873,7 @@ header {
   margin: 20px auto;
   background-color: transparent;
   border: none;
-  font-family: "Oswald Demi Bold", sans-serif;
+  font-family: "Oswald Demi Bold", "Oswald", sans-serif;
   letter-spacing: .2em;
   text-transform: uppercase;
   font-size: 1em;
@@ -939,7 +939,7 @@ header {
     text-align: justify; }
     .mid-review p a {
       margin-left: 1%;
-      font-family: "Oswald Demi Bold", sans-serif;
+      font-family: "Oswald Demi Bold", "Oswald", sans-serif;
       text-decoration: none;
       color: #131617; }
       .mid-review p a:hover, .mid-review p a:active, .mid-review p a:focus {
@@ -1077,7 +1077,7 @@ input[type=text] {
     margin-top: 5%;
     padding-bottom: 5%; }
   .pp a {
-    font-family: "Oswald Demi Bold", sans-serif;
+    font-family: "Oswald Demi Bold", "Oswald", sans-serif;
     color: #131617; }
     .pp a:hover, .pp a:active, .pp a:focus {
       color: #D8C5AF; }
@@ -1123,7 +1123,7 @@ footer {
     width: 80%; } }
 @media only screen and (max-width: 768px) {
   header {
-    background-image: url("../images/trees-fog-768.gif");
+    background-image: url("../images/trees-fog-768.jpg");
     height: 425px; }
 
   .title,
@@ -1320,7 +1320,7 @@ html {
 *:after {
   box-sizing: inherit; }
 
-img {
+img, video {
   max-width: 100%;
   height: auto; }
 

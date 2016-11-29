@@ -388,7 +388,7 @@ header {
     padding: 5px 0;
 }
 
-input[type=text] {
+input[type="text"] {
     width: 100%;
     height: 40px;
     border: none;
@@ -400,6 +400,34 @@ input[type=text] {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
+    font-size: .9em;
+}
+
+input[type="email"] {
+    margin-right: 5%;
+    width: 65%;
+    height: 40px;
+    padding: 12px 20px;
+    border: none;
+    background-color: rgba(235, 241, 246, .9);
+}
+
+input[type="submit"]{
+    height: 40px;
+    width: 25%;
+    background-color: transparent;
+    border: 1px solid $antique;
+    font-family: $bold-font;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    color: $antique;
+    &:hover{
+        background-color: $antique;
+        color: $midnight;
+    }
+}
+
+.subscribe{
     font-size: .9em;
 }
 
@@ -495,7 +523,7 @@ footer {
             display: flex;
         }
         li {
-            margin-right: 2%;
+            margin-right: 5%;
         }
         a {
             text-decoration: none;

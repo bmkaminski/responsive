@@ -1,7 +1,31 @@
 /* -------- media queries -------- */
 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1),
+only screen and (   min--moz-device-pixel-ratio: 1),
+only screen and (     -o-min-device-pixel-ratio: 1/1),
+only screen and (        min-device-pixel-ratio: 1),
+only screen and (                min-resolution: 96dpi),
+only screen and (                min-resolution: 1dppx) and (max-width: 2000px) { 
+  
+    
+        header {
+        background-image: url('../images/trees-fog-2000.jpg');
+
+    }
+
+
+}
+
+
+
 // ---> tablet landscape &+
 @media only screen and (max-width: 1024px) {
+    
+      header {
+        background-image: url('../images/trees-fog-1968.jpg');
+
+          
     .main-content {
         min-width: 100%;
     }
@@ -43,6 +67,9 @@
     }
     //---> tablet nav 
   
+.nav-main{
+        padding-top: 50px;
+    }
     
     .nav-main ul {
         justify-content: space-around;
@@ -102,13 +129,11 @@
 
 }
 
-@media only screen and (max-width: 736px) and (orientation: landscape){
-    
-          nav.nav-main{
-        padding-top: 50px;
-    }
-    
-}
+//@media only screen and (max-width: 736px) and (orientation: landscape){
+//    
+//
+//    
+//}
 
 // ---> phone landscape
 @media only screen and (max-width: 480px) {
@@ -128,8 +153,10 @@
     .btn-mobile {
         display: block;
     }
+    
     .nav-main {
         height: 0;
+        padding-top: 0;
         padding-bottom: 0;
         //		clear: both;
         overflow: hidden;

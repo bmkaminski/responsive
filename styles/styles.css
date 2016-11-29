@@ -834,7 +834,7 @@ h5 {
 
 h6 {
   padding-bottom: 5px;
-  color: #D8C5AF; }
+  color: #caaf96; }
 
 /* --------- hero image --------- */
 header {
@@ -935,15 +935,15 @@ header {
   .mid-review .mid-left {
     flex-direction: column;
     margin-right: 8%; }
-  .mid-review a {
-    margin-top: 5px;
-    margin-left: 4%;
-    font-family: "Oswald Demi Bold", sans-serif;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #131617; }
-    .mid-review a:hover {
-      text-decoration: underline; }
+  .mid-review p {
+    text-align: justify; }
+    .mid-review p a {
+      margin-left: 1%;
+      font-family: "Oswald Demi Bold", sans-serif;
+      text-decoration: none;
+      color: #131617; }
+      .mid-review p a:hover, .mid-review p a:active, .mid-review p a:focus {
+        text-decoration: underline; }
 
 /* -------- popular reviews -------- */
 .post-sections {
@@ -988,7 +988,9 @@ header {
 
 .back {
   margin-left: 2%;
-  text-align: left; }
+  text-align: left;
+  display: block;
+  width: 100%; }
 
 /* -------- right sidebar -------- */
 .right {
@@ -1004,7 +1006,7 @@ header {
 .post-sections a {
   text-decoration: none;
   color: #EBF1F6; }
-  .post-sections a:hover {
+  .post-sections a:hover, .post-sections a:active, .post-sections a:focus {
     text-decoration: underline; }
 
 .post-sections li {
@@ -1039,7 +1041,7 @@ input[type=text] {
   text-align: center; }
   .social a {
     color: #D8C5AF; }
-    .social a:hover {
+    .social a:hover, .social a:active, .social a:focus {
       color: #EBF1F6; }
   .social .fa {
     margin: 0 2%; }
@@ -1077,7 +1079,7 @@ input[type=text] {
   .pp a {
     font-family: "Oswald Demi Bold", sans-serif;
     color: #131617; }
-    .pp a:hover {
+    .pp a:hover, .pp a:active, .pp a:focus {
       color: #D8C5AF; }
 
 .mobile-logo {
@@ -1087,14 +1089,24 @@ input[type=text] {
 footer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin-left: 10%;
   height: 150px;
+  line-height: 2em;
   font-size: .75em;
   color: #D8C5AF; }
+  footer p {
+    margin-right: 10%; }
   footer nav ul {
     display: flex; }
   footer nav li {
-    padding-right: 1%; }
+    margin-right: 2%; }
+  footer nav a {
+    text-decoration: none;
+    color: #EBF1F6; }
+    footer nav a:hover, footer nav a:active, footer nav a:focus {
+      color: #D8C5AF;
+      text-decoration: underline; }
 
 /* -------- media queries -------- */
 @media only screen and (max-width: 1024px) {
@@ -1105,10 +1117,13 @@ footer {
     width: 90%; } }
 @media only screen and (max-width: 900px) {
   h4 {
-    font-size: 1.1em; } }
+    font-size: 1.1em; }
+
+  .nav-main ul {
+    width: 80%; } }
 @media only screen and (max-width: 768px) {
   header {
-    background-image: url("../images/trees-fog-tablet.jpg");
+    background-image: url("../images/trees-fog-768.gif");
     height: 425px; }
 
   .title,
@@ -1122,10 +1137,17 @@ footer {
     width: 30%; }
 
   .nav-main ul {
-    justify-content: center; }
+    justify-content: space-around;
+    margin: 0 auto; }
+
+  .nav-main li {
+    padding-top: 0;
+    padding-left: 0; }
+
+  .nav-main li:last-child {
+    padding-right: 0%; }
 
   .nav-main a {
-    padding: 0 25%;
     color: #EBF1F6; }
     .nav-main a:hover {
       color: #D8C5AF; }
@@ -1143,7 +1165,6 @@ footer {
     padding-bottom: 20px; }
 
   .back {
-    margin-left: 10%;
     text-align: center; }
 
   .col-03 {
@@ -1155,6 +1176,9 @@ footer {
 
   h4 {
     font-size: 1.2em; } }
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  nav.nav-main {
+    padding-top: 50px; } }
 @media only screen and (max-width: 480px) {
   main {
     margin-top: 0; }
@@ -1177,7 +1201,8 @@ footer {
 
   .nav-main ul {
     flex-direction: column;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
 
   .nav-main li {
     padding-top: 0;
@@ -1233,6 +1258,10 @@ footer {
     text-align: left; }
     .pp p {
       display: none; }
+
+  .review-01, .review-02 {
+    padding: 6%;
+    height: auto; }
 
   .review-01:after {
     top: 50%;

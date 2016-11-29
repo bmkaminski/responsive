@@ -1,10 +1,12 @@
 // Javascript Document
 
+
+// hopefully temporary 
 AOS.init({
   duration: 1200
 });
 
-// mobile nav
+/* -------- mobile navigation -------- */
 
 var $body = $('body');
 var $btnMobile = $('.btn-mobile');
@@ -12,6 +14,7 @@ var $btnMobile = $('.btn-mobile');
 $btnMobile.click(function(){
 	$body.toggleClass('show');
 
+    // switch out to close x
       var el = $(this);
   if (el.text() == el.data('text-swap')) {
     el.text(el.data('text-original'));
@@ -22,8 +25,8 @@ $btnMobile.click(function(){
     
 });
 
-// smooth scroll
 
+/* -------- smooth scroll -------- */
 
 $('a[href^="#link"]').click(function(event){
       var target = $( $(this).attr('href') );

@@ -15,7 +15,7 @@ body {
     font-family: $light-font;
     letter-spacing: .065em;
     line-height: 14.4pt;
-        font-size: .95em;
+    font-size: .95em;
 }
 
 // all content below header img/text
@@ -96,7 +96,7 @@ h5 {
 
 h6 {
     padding-bottom: 5px;
-    color: $antique;
+    color: #caaf96;
     //    border-bottom: 1px solid $antique;
 }
 
@@ -250,15 +250,18 @@ header {
         flex-direction: column;
         margin-right: 8%;
     }
-    a {
-        margin-top: 5px;
-        margin-left: 4%;
-        font-family: $bold-font;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $midnight;
-        &:hover {
-            text-decoration: underline;
+    p {
+        text-align: justify;
+        a {
+            margin-left: 1%;
+            font-family: $bold-font;
+            text-decoration: none;
+            color: $midnight;
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -329,6 +332,8 @@ header {
 .back {
     margin-left: 2%;
     text-align: left;
+    display: block;
+    width: 100%;
 }
 
 
@@ -354,7 +359,9 @@ header {
 .post-sections a {
     text-decoration: none;
     color: $mist;
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
         text-decoration: underline;
     }
 }
@@ -401,7 +408,9 @@ input[type=text] {
     text-align: center;
     a {
         color: $antique;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: $mist;
         }
     }
@@ -452,7 +461,9 @@ input[type=text] {
     a {
         font-family: $bold-font;
         color: $midnight;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: $antique;
         }
     }
@@ -469,16 +480,31 @@ input[type=text] {
 footer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-left: 10%;
     height: 150px;
+    line-height: 2em;
     font-size: .75em;
     color: $antique;
+    p {
+        margin-right: 10%;
+    }
     nav {
         ul {
             display: flex;
         }
         li {
-            padding-right: 1%;
+            margin-right: 2%;
+        }
+        a {
+            text-decoration: none;
+            color: $mist;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $antique;
+                text-decoration: underline;
+            }
         }
     }
 }

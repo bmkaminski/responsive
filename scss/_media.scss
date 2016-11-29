@@ -17,13 +17,17 @@
         font-size: 1.1em;
     }
     
+    .nav-main ul{
+        width: 80%;
+    }
+    
 }
 
 // ---> tablet portrait
 @media only screen and (max-width: 768px) {
     // change bg
     header {
-        background-image: url('../images/trees-fog-tablet.jpg');
+        background-image: url('../images/trees-fog-768.gif');
         height: 425px;
     }
     // hide intro title
@@ -37,12 +41,25 @@
         margin: 0 auto;
         width: 30%;
     }
-    //---> tablet nav    
+    //---> tablet nav 
+  
+    
     .nav-main ul {
-        justify-content: center;
+        justify-content: space-around;
+        margin: 0 auto;
     }
+    
+    .nav-main li{
+        padding-top: 0;
+        padding-left: 0;
+    }
+    
+    .nav-main li:last-child {
+    padding-right: 0%;
+}
+
     .nav-main a {
-        padding: 0 25%;
+//        padding: 0 0;
         color: $mist;
         &:hover {
             color: $antique;
@@ -65,7 +82,6 @@
     }
     // older posts
     .back{
-        margin-left: 10%;
         text-align: center;
     }
 
@@ -84,6 +100,14 @@
         font-size: 1.2em;
     }
 
+}
+
+@media only screen and (max-width: 736px) and (orientation: landscape){
+    
+          nav.nav-main{
+        padding-top: 50px;
+    }
+    
 }
 
 // ---> phone landscape
@@ -114,6 +138,7 @@
     .nav-main ul {
         flex-direction: column;
         text-align: center;
+        width: 100%;
     }
     .nav-main li {
         padding-top: 0;
@@ -124,6 +149,7 @@
             border-bottom: 1px solid $antique;
         }
     }
+    // controls height of nav
     .show .nav-main {
         height: 124px;
         margin-bottom: 40px;
@@ -168,6 +194,7 @@
     .flip {
         flex-direction: row-reverse;
     }
+    // popular post styles
     .pp {
         top: 0;
         text-align: left;
@@ -178,30 +205,43 @@
     
     }
     
+.review-01, .review-02 {
+    padding: 6%;
+    height: auto;
+    }
+    
+    // change triangle directions
+    // right
     .review-01:after {
         top: 50%;
         left: -9.5px;
         border-width: 10px 10px 10px 0;
         border-color: transparent $mist transparent transparent;
     }
+    // left
     .review-02:after {
         top: 50%;
         left: 100%;
         border-width: 10px 0 10px 10px;
         border-color: transparent transparent transparent $mist;
     }
+    // height of reviews
     .tall {
         height: 200px;
     }
-    // mobile fonts     
+    // ---> mobile fonts  
+    
+    // hide strikethrough h2
     h2 {
         display: none;
     }
+    // replace h2 w/ new h3
     .mobile-h3 {
         font-size: 1em;
         display: block;
         margin: 0px 10% 40px;
     }
+    // ---> make square gallery
     .content img {
         display: block;
     }
@@ -222,11 +262,11 @@
     .post-sections a {
         margin-top: 40px;
     }
-    
+    // hide gif 
     .stop-motion{
         display: none;
     }
-    
+    // replace gif w/ img 
     .mobile-img{
         display: block;
     }
@@ -235,7 +275,7 @@
 // ---> phone portrait
 @media only screen and (max-width: 375px) {
     
-   
+   // this is if you want single img gallery
     
     //    .content{
     //        flex-direction: column;

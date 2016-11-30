@@ -15,7 +15,6 @@ body {
     font-family: $light-font;
     letter-spacing: .065em;
     line-height: 14.4pt;
-    font-size: .95em;
 }
 
 // all content below header img/text
@@ -136,7 +135,7 @@ header {
     text-decoration: none;
     letter-spacing: .3em;
     font-family: $bold-font;
-    font-size: 14px;
+    font-size: .9;
     color: $midnight;
     transition: 0.3s ease;
     &:hover,
@@ -241,7 +240,7 @@ header {
 // main featured post size
 .main-content {
     max-width: 65%;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 // featured review 
@@ -275,7 +274,7 @@ header {
     display: flex;
     width: 80%;
     margin: 65px auto;
-    font-size: .8em;
+    font-size: .9em;
     border-bottom: 1px solid $mist;
 }
 
@@ -290,6 +289,7 @@ header {
     flex-wrap: wrap;
     width: 66.666666666666667%;
     margin-right: 5%;
+    justify-content: space-between;
 }
 
 .left a {
@@ -308,9 +308,8 @@ header {
 // image columns 
 .col-01,
 .col-02 {
-    margin: 0 auto;
     margin-top: 60px;
-    width: 47%;
+    width: 49%;
 }
 
 // leftmost image column 
@@ -318,14 +317,14 @@ header {
     margin-bottom: 50px;
     margin-right: .2%;
     article {
-        margin-bottom: 15px;
+        margin-bottom: 4%;
     }
 }
 
 // rightmost image column
 .col-02 {
     article {
-        margin-bottom: 15px;
+        margin-bottom: 4%;
     }
 }
 
@@ -405,7 +404,7 @@ input[type="text"] {
 
 input[type="email"] {
     margin-right: 5%;
-    width: 65%;
+    width: 60%;
     height: 40px;
     padding: 12px 20px;
     border: none;
@@ -414,11 +413,12 @@ input[type="email"] {
 
 input[type="submit"]{
     height: 40px;
-    width: 25%;
+    width: 35%;
     background-color: transparent;
     border: 1px solid $antique;
+    line-height: 38px;
     font-family: $bold-font;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-transform: uppercase;
     color: $antique;
     &:hover{
@@ -427,8 +427,17 @@ input[type="submit"]{
     }
 }
 
+.sign-up{
+        display: flex;
+    flex-wrap: wrap;
+}
+
 .subscribe{
     font-size: .9em;
+    
+    p{
+        margin-bottom: 20px;
+    }
 }
 
 //social media icons
@@ -513,7 +522,7 @@ footer {
     margin-left: 10%;
     height: 150px;
     line-height: 2em;
-    font-size: .75em;
+    font-size: .8em;
     color: $antique;
     p {
         margin-right: 10%;
@@ -523,7 +532,7 @@ footer {
             display: flex;
         }
         li {
-            margin-right: 5%;
+            margin-right: 2%;
         }
         a {
             text-decoration: none;

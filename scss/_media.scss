@@ -1,31 +1,17 @@
 /* -------- media queries -------- */
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 1),
-only screen and (   min--moz-device-pixel-ratio: 1),
-only screen and (     -o-min-device-pixel-ratio: 1/1),
-only screen and (        min-device-pixel-ratio: 1),
-only screen and (                min-resolution: 96dpi),
-only screen and (                min-resolution: 1dppx) and (max-width: 2000px) { 
-  
-    
-        header {
-        background-image: url('../images/trees-fog-2000.jpg');
-
+// non-retina display
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and ( min--moz-device-pixel-ratio: 1), only screen and ( -o-min-device-pixel-ratio: 1/1), only screen and ( min-device-pixel-ratio: 1), only screen and ( min-resolution: 96dpi), only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
+    header {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .05) 81%, rgba(19, 22, 23, .1) 81%, rgba(19, 22, 23, 1) 100%), url('../images/trees-fog-2000.jpg');
     }
-
-
 }
-
-
 
 // ---> tablet landscape &+
 @media only screen and (max-width: 1024px) {
-    
-      header {
-        background-image: url('../images/trees-fog-1968.jpg');
-
-          
+    header {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, .05) 81%, rgba(19, 22, 23, .1) 81%, rgba(19, 22, 23, 1) 100%), url('../images/trees-fog-2000.jpg');
+    }
     .main-content {
         min-width: 100%;
     }
@@ -36,15 +22,16 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
 
 // fix breaking cafe name header 
 @media only screen and (max-width: 900px) {
-    
-    h4{
+    h4 {
         font-size: 1.1em;
     }
-    
-    .nav-main ul{
+    .nav-main ul {
         width: 80%;
     }
     
+    .col-03{
+        margin: 0 0;
+    }
 }
 
 // ---> tablet portrait
@@ -66,27 +53,22 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
         width: 30%;
     }
     //---> tablet nav 
-  
-.nav-main{
+    .nav-main {
         padding-top: 50px;
     }
-    
     .nav-main ul {
         justify-content: space-around;
         margin: 0 auto;
     }
-    
-    .nav-main li{
+    .nav-main li {
         padding-top: 0;
         padding-left: 0;
     }
-    
     .nav-main li:last-child {
-    padding-right: 0%;
-}
-
+        padding-right: 0%;
+    }
     .nav-main a {
-//        padding: 0 0;
+        //        padding: 0 0;
         color: $mist;
         &:hover {
             color: $antique;
@@ -103,29 +85,41 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
     .right {
         width: 100%;
     }
-    
     .left a {
         padding-bottom: 20px;
     }
     // older posts
-    .back{
+    .back {
         text-align: center;
     }
-
+    
     // right column
-    .col-03{
+    .col-03 {
         padding-bottom: 50px;
         border-bottom: 1px solid $mist;
     }
+    
+    
+    
     // fix breaking popular review h3
     .popular {
         margin: 0 10%;
     }
-    
     // cafe name in reviews
-    h4{
+    h4 {
         font-size: 1.2em;
     }
+    
+    input[type="email"] {
+        
+        
+    }
+    
+    
+    input[type="submit"]{
+        
+        
+        }
 
 }
 
@@ -134,7 +128,6 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
 //
 //    
 //}
-
 // ---> phone landscape
 @media only screen and (max-width: 480px) {
     main {
@@ -153,7 +146,6 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
     .btn-mobile {
         display: block;
     }
-    
     .nav-main {
         height: 0;
         padding-top: 0;
@@ -225,18 +217,15 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
     .pp {
         top: 0;
         text-align: left;
-        
-        p{
+        p {
             display: none;
         }
-    
     }
-    
-.review-01, .review-02 {
-    padding: 6%;
-    height: auto;
+    .review-01,
+    .review-02 {
+        padding: 6%;
+        height: auto;
     }
-    
     // change triangle directions
     // right
     .review-01:after {
@@ -257,7 +246,6 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
         height: 200px;
     }
     // ---> mobile fonts  
-    
     // hide strikethrough h2
     h2 {
         display: none;
@@ -290,20 +278,18 @@ only screen and (                min-resolution: 1dppx) and (max-width: 2000px) 
         margin-top: 40px;
     }
     // hide gif 
-    .stop-motion{
+    .stop-motion {
         display: none;
     }
     // replace gif w/ img 
-    .mobile-img{
+    .mobile-img {
         display: block;
     }
 }
 
 // ---> phone portrait
 @media only screen and (max-width: 375px) {
-    
-   // this is if you want single img gallery
-    
+    // this is if you want single img gallery
     //    .content{
     //        flex-direction: column;
     //    }

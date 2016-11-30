@@ -1,7 +1,12 @@
 /* -------- media queries -------- */
 
 // non-retina display
-@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and ( min--moz-device-pixel-ratio: 1), only screen and ( -o-min-device-pixel-ratio: 1/1), only screen and ( min-device-pixel-ratio: 1), only screen and ( min-resolution: 96dpi), only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1),
+only screen and ( min--moz-device-pixel-ratio: 1),
+only screen and ( -o-min-device-pixel-ratio: 1/1),
+only screen and ( min-device-pixel-ratio: 1),
+only screen and ( min-resolution: 96dpi),
+only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     header {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, .05) 81%, rgba(19, 22, 23, .1) 81%, rgba(19, 22, 23, 1) 100%), url('../images/trees-fog-2000.jpg');
     }
@@ -28,8 +33,7 @@
     .nav-main ul {
         width: 80%;
     }
-    
-    .col-03{
+    .col-03 {
         margin: 0 0;
     }
 }
@@ -70,7 +74,9 @@
     .nav-main a {
         //        padding: 0 0;
         color: $mist;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: $antique;
         }
     }
@@ -92,15 +98,12 @@
     .back {
         text-align: center;
     }
-    
     // right column
     .col-03 {
+        margin: 0 10%;
         padding-bottom: 50px;
         border-bottom: 1px solid $mist;
     }
-    
-    
-    
     // fix breaking popular review h3
     .popular {
         margin: 0 10%;
@@ -111,16 +114,14 @@
     }
     
     input[type="email"] {
-        
-        
+    margin-right: 5%;
+        margin-bottom: 0;
+    width: 60%;
     }
     
-    
-    input[type="submit"]{
-        
-        
-        }
-
+    input[type="submit"] {
+    width: 35%;
+    }
 }
 
 //@media only screen and (max-width: 736px) and (orientation: landscape){
@@ -178,11 +179,24 @@
         display: block;
         width: 100%;
         text-transform: uppercase;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             background-color: $antique;
             color: $midnight;
         }
     }
+    
+        // hide gif 
+    .stop-motion {
+        display: none;
+    }
+    // replace gif w/ img 
+    .mobile-img {
+        display: block;
+    }
+    
+    
     // mobile make new gallery 
     .post-sections {
         width: 100%;
@@ -202,6 +216,11 @@
     .col-02 {
         margin-top: 0;
     }
+    
+      .popular {
+        margin: 0 8%;
+    }
+    
     .content {
         display: flex;
     }
@@ -254,7 +273,7 @@
     .mobile-h3 {
         font-size: 1em;
         display: block;
-        margin: 0px 10% 40px;
+        margin: 0px 8% 40px;
     }
     // ---> make square gallery
     .content img {
@@ -274,17 +293,27 @@
         width: 100%;
         margin-right: 0;
     }
-    .post-sections a {
+    .left a {
+        display: block;
+        margin-top: 25%;
+        text-align: center;
+    }
+    
+    .right{
+        margin-bottom: 0;
+    }
+    .right a {
         margin-top: 40px;
     }
-    // hide gif 
-    .stop-motion {
-        display: none;
+    
+    
+    h5{
+        margin: 40px 0 30px;
+        width: 100%;
+        font-size: 1.1em;
     }
-    // replace gif w/ img 
-    .mobile-img {
-        display: block;
-    }
+    
+
 }
 
 // ---> phone portrait

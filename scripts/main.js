@@ -1,7 +1,8 @@
 // Javascript Document
 
 
-// hopefully temporary 
+/* ------ aos fade up animation ------ */
+
 AOS.init({
   duration: 1200
 });
@@ -59,29 +60,25 @@ $('#submit').click(function(){
 });
 
 
+/* ------ play/pause video ------ */
 
-//var $btn = $('button');
-//var $nav = $('nav');
-//var $navUl = $('nav > ul');
-//
-//$btn.click(function(){
-//	$navUl.toggleClass('open');	
-//});
-//
-//// The following JS modified from 
-//// JS found at this per: http://codepen.io/laviperchik/pen/dlcBt
-//$.fn.accessibleDropDown = function () {
-//    
-//	var el = $(this);
-//
-//    /* Make dropdown menus keyboard accessible */
-//
-//    el.find('a').focus(function() {
-//        $(this).parents("li").addClass("hover");
-//    }).blur(function() {
-//        $(this).parents("li").removeClass("hover");
-//    });
-//
-//}
-//
-//$nav.accessibleDropDown();
+jQuery(document).ready(function($){
+    
+    $('.animation').click(function(){
+        
+        this.paused ? this.play() : this.pause();
+        
+    });
+});
+
+// on scroll
+
+var waypoint = new Waypoint({
+  element: document.getElementById('animation'),
+  handler: function() {
+    // notify('Basic waypoint triggered');
+    console.log('element entered viewport...');
+  }
+});
+
+

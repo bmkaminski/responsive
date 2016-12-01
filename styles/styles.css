@@ -1151,17 +1151,6 @@ footer {
       color: #BCAC9A;
       text-decoration: underline; }
 
-.credits {
-  margin-bottom: 50px;
-  height: auto; }
-  .credits a {
-    color: #BCAC9A; }
-    .credits a:hover {
-      text-decoration: underline;
-      color: #131617; }
-  .credits p {
-    padding-top: 20px; }
-
 /* -------- media queries -------- */
 @media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min--moz-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1 / 1), only screen and (min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) and (max-width: 2000px) {
   header {
@@ -1258,6 +1247,12 @@ footer {
 
   input[type="submit"] {
     width: 35%; } }
+@media only screen and (max-width: 736px) and (orientation: landscape) {
+  .col-03 {
+    font-size: .95em; }
+
+  .locations {
+    font-size: .7em; } }
 @media only screen and (max-width: 480px) {
   main {
     margin-top: 0; }
@@ -1407,7 +1402,7 @@ footer {
   h5 {
     margin: 40px 0 30px;
     width: 100%;
-    font-size: 1.1em; } }
+    font-size: 1em; } }
 /* ------------- resets ------------- */
 html {
   box-sizing: border-box; }

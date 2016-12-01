@@ -36,15 +36,13 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     .col-03 {
         margin: 0 0;
     }
-    
     .review-01,
-.review-02 {
-    height: 210px;
+    .review-02 {
+        height: 210px;
     }
-    
     .tall {
-    height: 330px;
-}
+        height: 330px;
+    }
 }
 
 // ---> tablet portrait
@@ -121,22 +119,28 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     h4 {
         font-size: 1.2em;
     }
-    
+    // change size of email input and submit btn
     input[type="email"] {
-    margin-right: 5%;
+        margin-right: 5%;
         margin-bottom: 0;
-    width: 60%;
+        width: 60%;
     }
-    
     input[type="submit"] {
-    width: 35%;
+        width: 35%;
     }
 }
 
-@media only screen and (max-width: 736px){
+@media only screen and (max-width: 736px) and (orientation:landscape) {
+    
+    .col-03{
+        font-size: .95em;
+    }
 
-
+.locations{
+    font-size: .7em;
 }
+}
+
 // ---> phone landscape
 @media only screen and (max-width: 480px) {
     main {
@@ -159,7 +163,6 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
         height: 0;
         padding-top: 0;
         padding-bottom: 0;
-        //		clear: both;
         overflow: hidden;
         transition: height 0.7s ease;
     }
@@ -194,8 +197,7 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
             color: $midnight;
         }
     }
-    
-        // hide gif 
+    // hide gif 
     .stop-motion {
         display: none;
     }
@@ -203,8 +205,6 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     .mobile-img {
         display: block;
     }
-    
-    
     // mobile make new gallery 
     .post-sections {
         width: 100%;
@@ -224,11 +224,9 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     .col-02 {
         margin-top: 0;
     }
-    
-      .popular {
+    .popular {
         margin: 0 8%;
     }
-    
     .content {
         display: flex;
     }
@@ -306,17 +304,15 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
         margin-top: 15%;
         text-align: center;
     }
-    
-    .right{
+    .right {
         margin-bottom: 0;
     }
     .right a {
         margin-top: 40px;
-    }   
-    h5{
+    }
+    h5 {
         margin: 40px 0 30px;
         width: 100%;
-        font-size: 1.1em;
-    }    
-
+        font-size: 1em;
+    }
 }

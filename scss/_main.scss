@@ -430,8 +430,8 @@ input[type="submit"] {
     color: $antique;
     -webkit-appearance: none;
     &:hover,
-     &:active,
-     &:focus {
+    &:active,
+    &:focus {
         background-color: $antique;
         color: $midnight;
     }
@@ -471,6 +471,7 @@ input[type="submit"] {
 .mobile-logo {
     display: none;
 }
+
 
 /* ----------- reviews ----------- */
 
@@ -558,20 +559,5 @@ footer {
             color: $antique;
             text-decoration: underline;
         }
-    }
-}
-
-.credits{
-    margin-bottom: 50px;
-    height: auto;
-    a{
-        color: $antique;
-        &:hover{
-            text-decoration: underline;
-            color: $midnight;
-        }
-    }
-    p{
-        padding-top: 20px;
     }
 }

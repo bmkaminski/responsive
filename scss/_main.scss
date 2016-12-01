@@ -15,7 +15,7 @@ body {
     background-color: $midnight;
     font-family: $light-font;
     letter-spacing: .065em;
-    line-height: 14.4pt;
+    line-height: 1.5em;
 }
 
 // all content below header img/text
@@ -283,6 +283,7 @@ header {
 // h3 "popular reviews"
 .popular {
     flex-basis: 100%;
+    align-self: center;
 }
 
 // left column with reviews
@@ -380,8 +381,8 @@ header {
 // sub list - locations
 .post-sections ul > li {
     list-style: circle;
-    margin-left: 60px;
-    font-size: .8em;
+    margin-left: 30px;
+    font-size: .95em;
 }
 
 //search bar
@@ -466,6 +467,13 @@ input[type="submit"] {
     }
 }
 
+// hide mobile logo
+.mobile-logo {
+    display: none;
+}
+
+/* ----------- reviews ----------- */
+
 // create review with triangle pointer
 .review-01,
 .review-02 {
@@ -514,11 +522,6 @@ input[type="submit"] {
             color: $antique;
         }
     }
-}
-
-// hide mobile logo
-.mobile-logo {
-    display: none;
 }
 
 

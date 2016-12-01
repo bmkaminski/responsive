@@ -29,29 +29,25 @@ $btnMobile.click(function(){
 
 /* -------- smooth scroll -------- */
 
-$('a[href^="#link"]').click(function(event){
-      var target = $( $(this).attr('href') );
-      
-    if( $(this).parents('header').hasClass('fixed') ){
-          
-          if(target.length) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: target.offset().top}, 800);
-            $('.tutorial').css('margin-top', '1px');
-          }
-          
-      }else {
-          
-          if(target.length) {
-            event.preventDefault();
-            $('html, body').animate({scrollTop: target.offset().top + 100}, 800);
-            $('.tutorial').css('margin-top', '1px');
-          }
-          
-      }
-      
-    });
+/* 
+The following code is from:
+https://css-tricks.com/snippets/jquery/smooth-scrolling/
+*/
 
+//$(function() {
+//  $('a[href*=#]:not([href=#])').click(function() {
+//    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//      var target = $(this.hash);
+//      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//      if (target.length) {
+//        $('html,body').animate({
+//          scrollTop: target.offset().top
+//        }, 1000);
+//        return false;
+//      }
+//    }
+//  });
+//});
 
 /* ---------- subscribe ---------- */
 
@@ -71,14 +67,50 @@ jQuery(document).ready(function($){
     });
 });
 
-// on scroll
 
-var waypoint = new Waypoint({
-  element: document.getElementById('animation'),
-  handler: function() {
-    // notify('Basic waypoint triggered');
-    console.log('element entered viewport...');
-  }
+/* ------ play video on scroll ------ */
+
+// This code modified from code at this Stackoverflow question and answer
+// http://stackoverflow.com/questions/23222131/jquery-fire-action-when-element-is-in-view
+
+$.fn.isOnScreen = function(){
+
+    var win = $(window);
+
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
+
+var $theVideo = $('#the-video');
+
+// Make sure video plays only once...
+var videoHasPlayed = false;
+
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($theVideo.isOnScreen()) {
+            // The element is visible, do something
+            if(videoHasPlayed === false){
+              $theVideo.get(0).play();
+              videoHasPlayed = true;
+            }
+          
+            // console.log("in viewport!");
+          
+        } else {
+            // The element is NOT visible, do something else
+            // console.log('out of viewport');
+        }
+    });
 });
-
-

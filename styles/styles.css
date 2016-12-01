@@ -769,7 +769,7 @@ body {
   background-color: #131617;
   font-family: "Open Sans", sans-serif;
   letter-spacing: .065em;
-  line-height: 14.4pt; }
+  line-height: 1.5em; }
 
 main {
   margin-top: 50px; }
@@ -955,7 +955,8 @@ header {
   border-bottom: 1px solid #EBF1F6; }
 
 .popular {
-  flex-basis: 100%; }
+  flex-basis: 100%;
+  align-self: center; }
 
 .left {
   display: flex;
@@ -1017,8 +1018,8 @@ header {
 
 .post-sections ul > li {
   list-style: circle;
-  margin-left: 60px;
-  font-size: .8em; }
+  margin-left: 30px;
+  font-size: .95em; }
 
 .search {
   background-color: rgba(235, 241, 246, 0.9);
@@ -1084,6 +1085,10 @@ input[type="submit"] {
   .social .fa {
     margin: 0 2%; }
 
+.mobile-logo {
+  display: none; }
+
+/* ----------- reviews ----------- */
 .review-01,
 .review-02 {
   padding: 4%;
@@ -1119,9 +1124,6 @@ input[type="submit"] {
     color: #131617; }
     .pp a:hover, .pp a:active, .pp a:focus {
       color: #BCAC9A; }
-
-.mobile-logo {
-  display: none; }
 
 /* ----------- footer ----------- */
 footer {
@@ -1181,7 +1183,14 @@ footer {
     width: 80%; }
 
   .col-03 {
-    margin: 0 0; } }
+    margin: 0 0; }
+
+  .review-01,
+  .review-02 {
+    height: 210px; }
+
+  .tall {
+    height: 330px; } }
 @media only screen and (max-width: 768px) {
   header {
     background-image: url("../images/trees-fog-768.jpg");
@@ -1336,7 +1345,7 @@ footer {
   .pp {
     top: 0;
     text-align: left; }
-    .pp p {
+    .pp span {
       display: none; }
 
   .review-01,
@@ -1386,7 +1395,7 @@ footer {
 
   .left a {
     display: block;
-    margin-top: 25%;
+    margin-top: 15%;
     text-align: center; }
 
   .right {

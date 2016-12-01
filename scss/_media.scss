@@ -36,6 +36,15 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     .col-03 {
         margin: 0 0;
     }
+    
+    .review-01,
+.review-02 {
+    height: 210px;
+    }
+    
+    .tall {
+    height: 330px;
+}
 }
 
 // ---> tablet portrait
@@ -124,11 +133,10 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     }
 }
 
-//@media only screen and (max-width: 736px) and (orientation: landscape){
-//    
-//
-//    
-//}
+@media only screen and (max-width: 736px){
+
+
+}
 // ---> phone landscape
 @media only screen and (max-width: 480px) {
     main {
@@ -236,7 +244,7 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     .pp {
         top: 0;
         text-align: left;
-        p {
+        span {
             display: none;
         }
     }
@@ -295,7 +303,7 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     }
     .left a {
         display: block;
-        margin-top: 25%;
+        margin-top: 15%;
         text-align: center;
     }
     
@@ -304,33 +312,11 @@ only screen and ( min-resolution: 1dppx) and (max-width: 2000px) {
     }
     .right a {
         margin-top: 40px;
-    }
-    
-    
+    }   
     h5{
         margin: 40px 0 30px;
         width: 100%;
         font-size: 1.1em;
-    }
-    
+    }    
 
 }
-
-// ---> phone portrait
-@media only screen and (max-width: 375px) {
-    // this is if you want single img gallery
-    //    .content{
-    //        flex-direction: column;
-    //    }
-    //    
-    //    .content .review {
-    ////        padding-bottom: 0%;
-    //        margin-bottom: 40px;
-    //    }
-}
-
-//i. Smartphone – portrait (320px wide)
-//ii. Smartphone – landscape (480px wide)
-//iii. Tablet – portrait (768px wide)
-//iv. Tablet – landscape(1024px wide)
-//v. Desktop – widths wider than 1024px
